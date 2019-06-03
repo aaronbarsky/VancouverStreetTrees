@@ -10,17 +10,12 @@ import UIKit
 import MapKit
 import GameKit
 
-class TreeAnnotation:MKPointAnnotation {
-    let feature:Feature
-    init (feature:Feature) {
+class TreeAnnotation:MKCircle {
+    var feature:Feature!
+    func setFeature(feature:Feature) {
+        assert(self.feature == nil)
         self.feature = feature
-        super.init()
-        self.coordinate =  CLLocationCoordinate2D(latitude: CLLocationDegrees(feature.geometry.coordinates[1]), longitude: CLLocationDegrees(feature.geometry.coordinates[0]))
-        self.title = feature.properties.commonName
-        self.subtitle = feature.properties.genusName + " " + feature.properties.speciesName + " " + feature.properties.cultivarName
-
     }
-
 }
 
 class MapViewController: UIViewController {
@@ -45,8 +40,13 @@ class MapViewController: UIViewController {
         //        print ("\(outpuFile)")x
         //        try! smallerTrees.write(to: outpuFile as URL)
 
-        let treeAnnotations = allTrees.map {
-            TreeAnnotation(feature: $0)
+        let treeAnnotations:[TreeAnnotation] = allTrees.map { feature in
+
+            let center =  CLLocationCoordinate2D(latitude: CLLocationDegrees(feature.geometry.coordinates[1]),
+                                                 longitude: CLLocationDegrees(feature.geometry.coordinates[0]))
+            let circle = TreeAnnotation(center: center, radius: CLLocationDistance(feature.properties.diameter * 0.05))
+            circle.setFeature(feature: feature)
+            return circle
         }
 
         let vanMin = vector_float2(49.195, -123.27 )
@@ -58,7 +58,6 @@ class MapViewController: UIViewController {
             let vector = vector_float2($0.feature.geometry.coordinates[1], $0.feature.geometry.coordinates[0])
             quadTree.add($0, at: vector)
         }
-//        mapView.addAnnotations(treeAnnotations)
 
 
         mapView.delegate = self
@@ -111,10 +110,24 @@ extension MapViewController:MKMapViewDelegate {
         let quadMax = vector_float2(Float(bbox.max.latitude), Float(bbox.max.longitude))
         let quad = GKQuad(quadMin: quadMin, quadMax: quadMax)
         print ("Quad \(quad)")
+
         let annotationsInBoundingBox = quadTree.elements(in: quad)
-        mapView.addAnnotations(annotationsInBoundingBox)
+        mapView.addOverlays(annotationsInBoundingBox)
+//        mapView.addAnnotations(annotationsInBoundingBox)
 
     }
+
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let treeOverlay = overlay as? TreeAnnotation else {
+            fatalError("What the fuck")
+
+        }
+        let renderer = MKCircleRenderer(circle: treeOverlay)
+        renderer.fillColor = treeOverlay.feature.properties.genusName.lowercased() == "acer" ?
+            .red : .gray
+        return renderer
+    }
+    /*
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let treeAnnotation = annotation as? TreeAnnotation else {
             return nil
@@ -130,4 +143,5 @@ extension MapViewController:MKMapViewDelegate {
         annoView.markerTintColor = UIColor.init(white: 0, alpha: CGFloat(min(0.3, treeAnnotation.feature.properties.diameter / 30)))
         return annoView
     }
+ \*/
 }
