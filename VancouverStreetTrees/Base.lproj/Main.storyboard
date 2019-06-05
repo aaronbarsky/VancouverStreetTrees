@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy7-mT-fhh">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,12 +31,66 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2n6-Se-01c"/>
                     <connections>
                         <outlet property="mapView" destination="GqQ-qF-JVb" id="KIC-FM-PYv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="85.714285714285708"/>
+        </scene>
+        <!--Wikipedia View Controller-->
+        <scene sceneID="zfR-TV-doe">
+            <objects>
+                <viewController storyboardIdentifier="WikipediaVC" id="TLQ-6N-kyD" customClass="WikipediaViewController" customModule="VancouverStreetTrees" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zr6-QE-3Jg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-RE-uCy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TF7-RE-uCy" firstAttribute="leading" secondItem="eSu-8W-jN3" secondAttribute="leading" id="0OY-9F-rJt"/>
+                            <constraint firstItem="eSu-8W-jN3" firstAttribute="bottom" secondItem="TF7-RE-uCy" secondAttribute="bottom" id="B8y-pK-wr5"/>
+                            <constraint firstItem="eSu-8W-jN3" firstAttribute="trailing" secondItem="TF7-RE-uCy" secondAttribute="trailing" id="e9n-tv-jxG"/>
+                            <constraint firstItem="TF7-RE-uCy" firstAttribute="top" secondItem="eSu-8W-jN3" secondAttribute="top" id="uuw-no-FfK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eSu-8W-jN3"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="TF7-RE-uCy" id="ewM-el-Pdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eg2-DS-eaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nbg-Zg-gbj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xy7-mT-fhh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="foq-pF-KBF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CG9-Au-6Bg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mq1-If-1ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="-588.61607142857144"/>
         </scene>
     </scenes>
 </document>

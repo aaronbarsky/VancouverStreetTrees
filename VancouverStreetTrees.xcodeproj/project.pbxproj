@@ -14,6 +14,10 @@
 		9B315F0622A493540021C5F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B315F0422A493540021C5F0 /* LaunchScreen.storyboard */; };
 		9B315F1122A493540021C5F0 /* VancouverStreetTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */; };
 		9B315F2F22A495480021C5F0 /* StreetTrees_CityWide.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B315F2E22A495480021C5F0 /* StreetTrees_CityWide.json */; };
+		9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B510D6422A5C50900613E38 /* WikipediaViewController.swift */; };
+		9B66352222A8517F00D4CF96 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B66352122A8517F00D4CF96 /* WebKit.framework */; };
+		9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66352322A8571100D4CF96 /* UIColor+hex.swift */; };
+		9B66352622A8574900D4CF96 /* TreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66352522A8574900D4CF96 /* TreeAnnotation.swift */; };
 		9B8913E222A49641007F6C3D /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913DE22A49641007F6C3D /* Geometry.swift */; };
 		9B8913E322A49641007F6C3D /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913DF22A49641007F6C3D /* Properties.swift */; };
 		9B8913E422A49641007F6C3D /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E022A49641007F6C3D /* Feature.swift */; };
@@ -45,6 +49,10 @@
 		9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VancouverStreetTreesTests.swift; sourceTree = "<group>"; };
 		9B315F1222A493540021C5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B315F2E22A495480021C5F0 /* StreetTrees_CityWide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StreetTrees_CityWide.json; sourceTree = "<group>"; };
+		9B510D6422A5C50900613E38 /* WikipediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaViewController.swift; sourceTree = "<group>"; };
+		9B66352122A8517F00D4CF96 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9B66352322A8571100D4CF96 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		9B66352522A8574900D4CF96 /* TreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAnnotation.swift; sourceTree = "<group>"; };
 		9B8913DE22A49641007F6C3D /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		9B8913DF22A49641007F6C3D /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		9B8913E022A49641007F6C3D /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B66352222A8517F00D4CF96 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 				9B315EFA22A493520021C5F0 /* VancouverStreetTrees */,
 				9B315F0F22A493540021C5F0 /* VancouverStreetTreesTests */,
 				9B315EF922A493520021C5F0 /* Products */,
+				9B66352022A8517F00D4CF96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +114,9 @@
 				9B315F0422A493540021C5F0 /* LaunchScreen.storyboard */,
 				9B315F0722A493540021C5F0 /* Info.plist */,
 				9B8913E822A49B87007F6C3D /* TreeData.swift */,
+				9B510D6422A5C50900613E38 /* WikipediaViewController.swift */,
+				9B66352322A8571100D4CF96 /* UIColor+hex.swift */,
+				9B66352522A8574900D4CF96 /* TreeAnnotation.swift */,
 			);
 			path = VancouverStreetTrees;
 			sourceTree = "<group>";
@@ -115,6 +128,14 @@
 				9B315F1222A493540021C5F0 /* Info.plist */,
 			);
 			path = VancouverStreetTreesTests;
+			sourceTree = "<group>";
+		};
+		9B66352022A8517F00D4CF96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B66352122A8517F00D4CF96 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9B8913DD22A49641007F6C3D /* File Parsing */ = {
@@ -238,6 +259,9 @@
 				9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */,
 				9B8913E422A49641007F6C3D /* Feature.swift in Sources */,
 				9B8913E522A49641007F6C3D /* StreetTrees.swift in Sources */,
+				9B66352622A8574900D4CF96 /* TreeAnnotation.swift in Sources */,
+				9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */,
+				9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */,
 				9B315EFC22A493520021C5F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,15 +424,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W6D936SL86;
+				DEVELOPMENT_TEAM = 9486CQ5DH7;
 				INFOPLIST_FILE = VancouverStreetTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yellowcedarsoftware.VancouverStreetTrees;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yellowcedarsoftware.vancouverstreettrees5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -418,15 +444,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W6D936SL86;
+				DEVELOPMENT_TEAM = 9486CQ5DH7;
 				INFOPLIST_FILE = VancouverStreetTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yellowcedarsoftware.VancouverStreetTrees;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yellowcedarsoftware.vancouverstreettrees5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
