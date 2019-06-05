@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0B9E1422A88C6600AE4485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1222A88C6600AE4485 /* LaunchScreen.storyboard */; };
+		9B0B9E1B22A88D3B00AE4485 /* smalltrees.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */; };
 		9B315EFC22A493520021C5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFB22A493520021C5F0 /* AppDelegate.swift */; };
 		9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFD22A493520021C5F0 /* MapViewController.swift */; };
 		9B315F0122A493520021C5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B315EFF22A493520021C5F0 /* Main.storyboard */; };
 		9B315F0322A493540021C5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B315F0222A493540021C5F0 /* Assets.xcassets */; };
-		9B315F0622A493540021C5F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B315F0422A493540021C5F0 /* LaunchScreen.storyboard */; };
 		9B315F1122A493540021C5F0 /* VancouverStreetTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */; };
-		9B315F2F22A495480021C5F0 /* StreetTrees_CityWide.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B315F2E22A495480021C5F0 /* StreetTrees_CityWide.json */; };
 		9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B510D6422A5C50900613E38 /* WikipediaViewController.swift */; };
 		9B66352222A8517F00D4CF96 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B66352122A8517F00D4CF96 /* WebKit.framework */; };
 		9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66352322A8571100D4CF96 /* UIColor+hex.swift */; };
@@ -21,10 +21,8 @@
 		9B8913E222A49641007F6C3D /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913DE22A49641007F6C3D /* Geometry.swift */; };
 		9B8913E322A49641007F6C3D /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913DF22A49641007F6C3D /* Properties.swift */; };
 		9B8913E422A49641007F6C3D /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E022A49641007F6C3D /* Feature.swift */; };
-		9B8913E522A49641007F6C3D /* StreetTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E122A49641007F6C3D /* StreetTrees.swift */; };
 		9B8913E922A49B87007F6C3D /* TreeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E822A49B87007F6C3D /* TreeData.swift */; };
-		9B8913EC22A4A758007F6C3D /* LaunchImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8913EB22A4A757007F6C3D /* LaunchImage.jpg */; };
-		9B973AC822A4C7D8007E5DA6 /* smalltrees.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B973AC722A4C7D7007E5DA6 /* smalltrees.json */; };
+		9BA8D65F22A8859000379399 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8D65E22A8859000379399 /* BoundingBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0B9E1322A88C6600AE4485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B0B9E1722A88D0B00AE4485 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smalltrees.json; sourceTree = "<group>"; };
 		9B315EF822A493520021C5F0 /* VancouverStreetTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VancouverStreetTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B315EFB22A493520021C5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B315EFD22A493520021C5F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9B315F0022A493520021C5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B315F0222A493540021C5F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9B315F0522A493540021C5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9B315F0722A493540021C5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B315F0C22A493540021C5F0 /* VancouverStreetTreesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VancouverStreetTreesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VancouverStreetTreesTests.swift; sourceTree = "<group>"; };
 		9B315F1222A493540021C5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B315F2E22A495480021C5F0 /* StreetTrees_CityWide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StreetTrees_CityWide.json; sourceTree = "<group>"; };
 		9B510D6422A5C50900613E38 /* WikipediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaViewController.swift; sourceTree = "<group>"; };
 		9B66352122A8517F00D4CF96 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9B66352322A8571100D4CF96 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
@@ -56,10 +54,8 @@
 		9B8913DE22A49641007F6C3D /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		9B8913DF22A49641007F6C3D /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		9B8913E022A49641007F6C3D /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
-		9B8913E122A49641007F6C3D /* StreetTrees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetTrees.swift; sourceTree = "<group>"; };
 		9B8913E822A49B87007F6C3D /* TreeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeData.swift; sourceTree = "<group>"; };
-		9B8913EB22A4A757007F6C3D /* LaunchImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchImage.jpg; sourceTree = "<group>"; };
-		9B973AC722A4C7D7007E5DA6 /* smalltrees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smalltrees.json; sourceTree = "<group>"; };
+		9BA8D65E22A8859000379399 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B082B0F22A889D3000675B2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9BA8D65E22A8859000379399 /* BoundingBox.swift */,
+				9B66352322A8571100D4CF96 /* UIColor+hex.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9B0B9E1922A88D3A00AE4485 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9B315EEF22A493520021C5F0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,20 +116,16 @@
 		9B315EFA22A493520021C5F0 /* VancouverStreetTrees */ = {
 			isa = PBXGroup;
 			children = (
-				9B8913DD22A49641007F6C3D /* File Parsing */,
-				9B315EFB22A493520021C5F0 /* AppDelegate.swift */,
-				9B315EFD22A493520021C5F0 /* MapViewController.swift */,
-				9B315EFF22A493520021C5F0 /* Main.storyboard */,
+				9B0B9E1922A88D3A00AE4485 /* Resources */,
+				9B0B9E1722A88D0B00AE4485 /* Info.plist */,
 				9B315F0222A493540021C5F0 /* Assets.xcassets */,
-				9B973AC722A4C7D7007E5DA6 /* smalltrees.json */,
-				9B8913EB22A4A757007F6C3D /* LaunchImage.jpg */,
-				9B315F2E22A495480021C5F0 /* StreetTrees_CityWide.json */,
-				9B315F0422A493540021C5F0 /* LaunchScreen.storyboard */,
-				9B315F0722A493540021C5F0 /* Info.plist */,
-				9B8913E822A49B87007F6C3D /* TreeData.swift */,
-				9B510D6422A5C50900613E38 /* WikipediaViewController.swift */,
-				9B66352322A8571100D4CF96 /* UIColor+hex.swift */,
-				9B66352522A8574900D4CF96 /* TreeAnnotation.swift */,
+				9B082B0F22A889D3000675B2 /* Utilities */,
+				9B7BDD7E22A88667002FE60C /* Map View */,
+				9B7BDD7D22A8865A002FE60C /* Tree Details */,
+				9B8913DD22A49641007F6C3D /* Data Models */,
+				9B315EFB22A493520021C5F0 /* AppDelegate.swift */,
+				9B0B9E1222A88C6600AE4485 /* LaunchScreen.storyboard */,
+				9B315EFF22A493520021C5F0 /* Main.storyboard */,
 			);
 			path = VancouverStreetTrees;
 			sourceTree = "<group>";
@@ -138,15 +147,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9B8913DD22A49641007F6C3D /* File Parsing */ = {
+		9B7BDD7C22A88638002FE60C /* JsonCoding */ = {
 			isa = PBXGroup;
 			children = (
 				9B8913DE22A49641007F6C3D /* Geometry.swift */,
 				9B8913DF22A49641007F6C3D /* Properties.swift */,
 				9B8913E022A49641007F6C3D /* Feature.swift */,
-				9B8913E122A49641007F6C3D /* StreetTrees.swift */,
 			);
-			path = "File Parsing";
+			path = JsonCoding;
+			sourceTree = "<group>";
+		};
+		9B7BDD7D22A8865A002FE60C /* Tree Details */ = {
+			isa = PBXGroup;
+			children = (
+				9B510D6422A5C50900613E38 /* WikipediaViewController.swift */,
+			);
+			path = "Tree Details";
+			sourceTree = "<group>";
+		};
+		9B7BDD7E22A88667002FE60C /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				9B315EFD22A493520021C5F0 /* MapViewController.swift */,
+				9B66352522A8574900D4CF96 /* TreeAnnotation.swift */,
+			);
+			path = "Map View";
+			sourceTree = "<group>";
+		};
+		9B8913DD22A49641007F6C3D /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B7BDD7C22A88638002FE60C /* JsonCoding */,
+				9B8913E822A49B87007F6C3D /* TreeData.swift */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,11 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8913EC22A4A758007F6C3D /* LaunchImage.jpg in Resources */,
-				9B315F2F22A495480021C5F0 /* StreetTrees_CityWide.json in Resources */,
-				9B315F0622A493540021C5F0 /* LaunchScreen.storyboard in Resources */,
-				9B973AC822A4C7D8007E5DA6 /* smalltrees.json in Resources */,
+				9B0B9E1B22A88D3B00AE4485 /* smalltrees.json in Resources */,
 				9B315F0322A493540021C5F0 /* Assets.xcassets in Resources */,
+				9B0B9E1422A88C6600AE4485 /* LaunchScreen.storyboard in Resources */,
 				9B315F0122A493520021C5F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +290,7 @@
 				9B8913E222A49641007F6C3D /* Geometry.swift in Sources */,
 				9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */,
 				9B8913E422A49641007F6C3D /* Feature.swift in Sources */,
-				9B8913E522A49641007F6C3D /* StreetTrees.swift in Sources */,
+				9BA8D65F22A8859000379399 /* BoundingBox.swift in Sources */,
 				9B66352622A8574900D4CF96 /* TreeAnnotation.swift in Sources */,
 				9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */,
 				9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */,
@@ -285,20 +317,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9B0B9E1222A88C6600AE4485 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B0B9E1322A88C6600AE4485 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		9B315EFF22A493520021C5F0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9B315F0022A493520021C5F0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9B315F0422A493540021C5F0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9B315F0522A493540021C5F0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

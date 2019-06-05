@@ -3,7 +3,7 @@
 //  VancouverStreetTreesTests
 //
 //  Created by Aaron Barsky on 6/2/19.
-//  Copyright © 2019 PayByPhone. All rights reserved.
+//  Copyright © 2019 YellowCedarSoftware. All rights reserved.
 //
 
 import XCTest
