@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-qF-JVb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -27,7 +27,7 @@
                             <constraint firstAttribute="trailing" secondItem="GqQ-qF-JVb" secondAttribute="trailing" id="2P0-bK-LBY"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f9U-yq-uvb"/>
                             <constraint firstAttribute="bottom" secondItem="GqQ-qF-JVb" secondAttribute="bottom" id="ocq-h3-Fy3"/>
-                            <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wln-Li-1WB"/>
+                            <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wln-Li-1WB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
