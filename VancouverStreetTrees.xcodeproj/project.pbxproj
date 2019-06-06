@@ -23,6 +23,8 @@
 		9B8913E422A49641007F6C3D /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E022A49641007F6C3D /* Feature.swift */; };
 		9B8913E922A49B87007F6C3D /* TreeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E822A49B87007F6C3D /* TreeData.swift */; };
 		9BA8D65F22A8859000379399 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8D65E22A8859000379399 /* BoundingBox.swift */; };
+		9BF9AE4922A8D5D800A9D47F /* smalltrees.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */; };
+		9BF9AE4B22A8D5EB00A9D47F /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 		9B8913E022A49641007F6C3D /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		9B8913E822A49B87007F6C3D /* TreeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeData.swift; sourceTree = "<group>"; };
 		9BA8D65E22A8859000379399 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 			children = (
 				9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */,
 				9B315F1222A493540021C5F0 /* Info.plist */,
+				9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */,
 			);
 			path = VancouverStreetTreesTests;
 			sourceTree = "<group>";
@@ -275,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF9AE4922A8D5D800A9D47F /* smalltrees.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B315F1122A493540021C5F0 /* VancouverStreetTreesTests.swift in Sources */,
+				9BF9AE4B22A8D5EB00A9D47F /* MapViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
