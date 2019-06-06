@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import GameKit
 
 class MapViewController: UIViewController {
 
@@ -16,25 +15,11 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
 
     var locationManager:CLLocationManager!
-    var quadTree:GKQuadtree<TreeAnnotation>!
+    var unloadedRegions:Set<BoundingBoxToFilename>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let allTrees = loadTreeData()
-        let treeAnnotations = allTrees.map {
-            TreeAnnotation(feature: $0)
-        }
-
-        let vanMin = vector_float2(49.195, -123.27 )
-        let vanMax = vector_float2(49.315, -123.020 )
-
-        let vancouverQuad = GKQuad(quadMin:vanMin, quadMax: vanMax)
-        quadTree = GKQuadtree(boundingQuad: vancouverQuad, minimumCellSize: 0.001)
-        treeAnnotations.forEach {
-            let vector = vector_float2($0.feature.geometry.coordinates[1], $0.feature.geometry.coordinates[0])
-            quadTree.add($0, at: vector)
-        }
+        unloadedRegions = Set(loadTreeRegionMap())
 
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier:markerReuseID)
         mapView.delegate = self
@@ -42,10 +27,17 @@ class MapViewController: UIViewController {
         mapView.setUserTrackingMode(.follow, animated: true)
     }
 
-    func loadTreeData() -> [Feature] {
-        let treeDataJsonFileURL = Bundle.main.url(forResource: "smalltrees", withExtension: "json")!
-        let treeData = try! Data(contentsOf: treeDataJsonFileURL)
-        return try! JSONDecoder().decode([Feature].self, from: treeData)
+    func loadTreeRegionMap() -> [BoundingBoxToFilename]   {
+        let regionMapURL = Bundle.main.url(forResource: "BoundingBoxToFile", withExtension: "json")!
+        let regionMapData = try! Data(contentsOf: regionMapURL)
+        let regionMap = try! JSONDecoder().decode([BoundingBoxFile].self, from: regionMapData)
+        return regionMap.map {
+            let cgRect = CGRect(x: CGFloat($0.minLng),
+                                y: CGFloat($0.minLat),
+                                width: CGFloat($0.maxLng - $0.minLng),
+                                height: CGFloat($0.maxLat - $0.minLat) )
+            return BoundingBoxToFilename(rect: cgRect, filename: $0.filename)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -191,15 +183,22 @@ extension MapViewController:MKMapViewDelegate {
     }
 
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        let bbox = BoundingBox(rect: mapView.visibleMapRect)
-        print ("Map rect \(bbox)")
-        let quadMin = vector_float2(Float(bbox.min.latitude), Float(bbox.min.longitude))
-        let quadMax = vector_float2(Float(bbox.max.latitude), Float(bbox.max.longitude))
-        let quad = GKQuad(quadMin: quadMin, quadMax: quadMax)
-        print ("Quad \(quad)")
-        let annotationsInBoundingBox = quadTree.elements(in: quad)
-        mapView.addAnnotations(annotationsInBoundingBox)
+        let mapRectBoundingBox = MapRectBoundingBox(rect: mapView.visibleMapRect)
+        let boundingBox = mapRectBoundingBox.cgRect
+
+        for region in unloadedRegions{
+            if region.rect.intersects(boundingBox) {
+                print ("Loading \(region.filename)")
+                print ("MapRectBBox: \(mapRectBoundingBox)")
+                print ("Region bounding box: \(boundingBox)")
+                unloadedRegions.remove(region)
+                let regionTrees = region.load()
+                let treeAnnotations = regionTrees.map { TreeAnnotation(feature: $0) }
+                mapView.addAnnotations(treeAnnotations)
+            }
+        }
     }
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let treeAnnotation = annotation as? TreeAnnotation else {
             return nil
@@ -236,6 +235,5 @@ extension MapViewController:MKMapViewDelegate {
         let species = feature.properties.speciesName.lowercased().split(separator: " ").first!
         let genus = feature.properties.genusName.capitalized.split(separator: " ").first!
         return URL(string: "https://en.wikipedia.org/wiki/\(genus)_\(species)")
-
     }
 }

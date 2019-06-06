@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9B0B9E1422A88C6600AE4485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1222A88C6600AE4485 /* LaunchScreen.storyboard */; };
-		9B0B9E1B22A88D3B00AE4485 /* smalltrees.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */; };
 		9B315EFC22A493520021C5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFB22A493520021C5F0 /* AppDelegate.swift */; };
 		9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFD22A493520021C5F0 /* MapViewController.swift */; };
 		9B315F0122A493520021C5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B315EFF22A493520021C5F0 /* Main.storyboard */; };
@@ -22,9 +21,33 @@
 		9B8913E322A49641007F6C3D /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913DF22A49641007F6C3D /* Properties.swift */; };
 		9B8913E422A49641007F6C3D /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E022A49641007F6C3D /* Feature.swift */; };
 		9B8913E922A49B87007F6C3D /* TreeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E822A49B87007F6C3D /* TreeData.swift */; };
-		9BA8D65F22A8859000379399 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8D65E22A8859000379399 /* BoundingBox.swift */; };
-		9BF9AE4922A8D5D800A9D47F /* smalltrees.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */; };
+		9BA8D65F22A8859000379399 /* MapRectBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8D65E22A8859000379399 /* MapRectBoundingBox.swift */; };
 		9BF9AE4B22A8D5EB00A9D47F /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */; };
+		9BF9AEC722A96D2600A9D47F /* BoundingBoxToFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AEB022A96D2100A9D47F /* BoundingBoxToFile.json */; };
+		9BF9AEDC22A96D7300A9D47F /* BoundingBoxFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AEDB22A96D7300A9D47F /* BoundingBoxFile.swift */; };
+		9BF9AEDE22A96D9500A9D47F /* BoundingBoxToFilename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AEDD22A96D9500A9D47F /* BoundingBoxToFilename.swift */; };
+		9BF9AF2322A9777700A9D47F /* Trees_WestEnd.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF0D22A9777500A9D47F /* Trees_WestEnd.json */; };
+		9BF9AF2422A9777700A9D47F /* Trees_Kerrisdale.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF0E22A9777500A9D47F /* Trees_Kerrisdale.json */; };
+		9BF9AF2522A9777700A9D47F /* Trees_Downtown.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF0F22A9777500A9D47F /* Trees_Downtown.json */; };
+		9BF9AF2622A9777700A9D47F /* Trees_MountPleasant.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1022A9777500A9D47F /* Trees_MountPleasant.json */; };
+		9BF9AF2722A9777700A9D47F /* Trees_DunbarSouthlands.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1122A9777500A9D47F /* Trees_DunbarSouthlands.json */; };
+		9BF9AF2822A9777700A9D47F /* Trees_HastingsSunrise.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1222A9777500A9D47F /* Trees_HastingsSunrise.json */; };
+		9BF9AF2922A9777700A9D47F /* Trees_RileyPark.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1322A9777500A9D47F /* Trees_RileyPark.json */; };
+		9BF9AF2A22A9777700A9D47F /* Trees_WestPointGrey.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1422A9777500A9D47F /* Trees_WestPointGrey.json */; };
+		9BF9AF2B22A9777700A9D47F /* Trees_Sunset.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1522A9777600A9D47F /* Trees_Sunset.json */; };
+		9BF9AF2C22A9777700A9D47F /* Trees_Kitsilano.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1622A9777600A9D47F /* Trees_Kitsilano.json */; };
+		9BF9AF2D22A9777700A9D47F /* Trees_GrandviewWoodland.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1722A9777600A9D47F /* Trees_GrandviewWoodland.json */; };
+		9BF9AF2E22A9777700A9D47F /* Trees_Marpole.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1822A9777600A9D47F /* Trees_Marpole.json */; };
+		9BF9AF2F22A9777700A9D47F /* Trees_Shaughnessy.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1922A9777600A9D47F /* Trees_Shaughnessy.json */; };
+		9BF9AF3022A9777700A9D47F /* Trees_Fairview.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1A22A9777600A9D47F /* Trees_Fairview.json */; };
+		9BF9AF3122A9777700A9D47F /* Trees_Oakridge.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1B22A9777600A9D47F /* Trees_Oakridge.json */; };
+		9BF9AF3222A9777700A9D47F /* Trees_SouthCambie.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1C22A9777600A9D47F /* Trees_SouthCambie.json */; };
+		9BF9AF3322A9777700A9D47F /* Trees_KensingtonCedarCottage.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1D22A9777700A9D47F /* Trees_KensingtonCedarCottage.json */; };
+		9BF9AF3422A9777700A9D47F /* Trees_Strathcona.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1E22A9777700A9D47F /* Trees_Strathcona.json */; };
+		9BF9AF3522A9777700A9D47F /* Trees_ArbutusRidge.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF1F22A9777700A9D47F /* Trees_ArbutusRidge.json */; };
+		9BF9AF3622A9777700A9D47F /* Trees_Killarney.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF2022A9777700A9D47F /* Trees_Killarney.json */; };
+		9BF9AF3722A9777700A9D47F /* Trees_VictoriaFraserview.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF2122A9777700A9D47F /* Trees_VictoriaFraserview.json */; };
+		9BF9AF3822A9777700A9D47F /* Trees_RenfrewCollingwood.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF2222A9777700A9D47F /* Trees_RenfrewCollingwood.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +63,6 @@
 /* Begin PBXFileReference section */
 		9B0B9E1322A88C6600AE4485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B0B9E1722A88D0B00AE4485 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smalltrees.json; sourceTree = "<group>"; };
 		9B315EF822A493520021C5F0 /* VancouverStreetTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VancouverStreetTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B315EFB22A493520021C5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B315EFD22A493520021C5F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +79,33 @@
 		9B8913DF22A49641007F6C3D /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		9B8913E022A49641007F6C3D /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		9B8913E822A49B87007F6C3D /* TreeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeData.swift; sourceTree = "<group>"; };
-		9BA8D65E22A8859000379399 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		9BA8D65E22A8859000379399 /* MapRectBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRectBoundingBox.swift; sourceTree = "<group>"; };
 		9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
+		9BF9AEB022A96D2100A9D47F /* BoundingBoxToFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BoundingBoxToFile.json; sourceTree = "<group>"; };
+		9BF9AEDB22A96D7300A9D47F /* BoundingBoxFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxFile.swift; sourceTree = "<group>"; };
+		9BF9AEDD22A96D9500A9D47F /* BoundingBoxToFilename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxToFilename.swift; sourceTree = "<group>"; };
+		9BF9AF0D22A9777500A9D47F /* Trees_WestEnd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_WestEnd.json; sourceTree = "<group>"; };
+		9BF9AF0E22A9777500A9D47F /* Trees_Kerrisdale.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Kerrisdale.json; sourceTree = "<group>"; };
+		9BF9AF0F22A9777500A9D47F /* Trees_Downtown.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Downtown.json; sourceTree = "<group>"; };
+		9BF9AF1022A9777500A9D47F /* Trees_MountPleasant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_MountPleasant.json; sourceTree = "<group>"; };
+		9BF9AF1122A9777500A9D47F /* Trees_DunbarSouthlands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_DunbarSouthlands.json; sourceTree = "<group>"; };
+		9BF9AF1222A9777500A9D47F /* Trees_HastingsSunrise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_HastingsSunrise.json; sourceTree = "<group>"; };
+		9BF9AF1322A9777500A9D47F /* Trees_RileyPark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_RileyPark.json; sourceTree = "<group>"; };
+		9BF9AF1422A9777500A9D47F /* Trees_WestPointGrey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_WestPointGrey.json; sourceTree = "<group>"; };
+		9BF9AF1522A9777600A9D47F /* Trees_Sunset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Sunset.json; sourceTree = "<group>"; };
+		9BF9AF1622A9777600A9D47F /* Trees_Kitsilano.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Kitsilano.json; sourceTree = "<group>"; };
+		9BF9AF1722A9777600A9D47F /* Trees_GrandviewWoodland.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_GrandviewWoodland.json; sourceTree = "<group>"; };
+		9BF9AF1822A9777600A9D47F /* Trees_Marpole.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Marpole.json; sourceTree = "<group>"; };
+		9BF9AF1922A9777600A9D47F /* Trees_Shaughnessy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Shaughnessy.json; sourceTree = "<group>"; };
+		9BF9AF1A22A9777600A9D47F /* Trees_Fairview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Fairview.json; sourceTree = "<group>"; };
+		9BF9AF1B22A9777600A9D47F /* Trees_Oakridge.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Oakridge.json; sourceTree = "<group>"; };
+		9BF9AF1C22A9777600A9D47F /* Trees_SouthCambie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_SouthCambie.json; sourceTree = "<group>"; };
+		9BF9AF1D22A9777700A9D47F /* Trees_KensingtonCedarCottage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_KensingtonCedarCottage.json; sourceTree = "<group>"; };
+		9BF9AF1E22A9777700A9D47F /* Trees_Strathcona.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Strathcona.json; sourceTree = "<group>"; };
+		9BF9AF1F22A9777700A9D47F /* Trees_ArbutusRidge.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_ArbutusRidge.json; sourceTree = "<group>"; };
+		9BF9AF2022A9777700A9D47F /* Trees_Killarney.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_Killarney.json; sourceTree = "<group>"; };
+		9BF9AF2122A9777700A9D47F /* Trees_VictoriaFraserview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_VictoriaFraserview.json; sourceTree = "<group>"; };
+		9BF9AF2222A9777700A9D47F /* Trees_RenfrewCollingwood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_RenfrewCollingwood.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +130,7 @@
 		9B082B0F22A889D3000675B2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				9BA8D65E22A8859000379399 /* BoundingBox.swift */,
+				9BA8D65E22A8859000379399 /* MapRectBoundingBox.swift */,
 				9B66352322A8571100D4CF96 /* UIColor+hex.swift */,
 			);
 			path = Utilities;
@@ -92,7 +139,29 @@
 		9B0B9E1922A88D3A00AE4485 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9B0B9E1A22A88D3A00AE4485 /* smalltrees.json */,
+				9BF9AF1F22A9777700A9D47F /* Trees_ArbutusRidge.json */,
+				9BF9AF0F22A9777500A9D47F /* Trees_Downtown.json */,
+				9BF9AF1122A9777500A9D47F /* Trees_DunbarSouthlands.json */,
+				9BF9AF1A22A9777600A9D47F /* Trees_Fairview.json */,
+				9BF9AF1722A9777600A9D47F /* Trees_GrandviewWoodland.json */,
+				9BF9AF1222A9777500A9D47F /* Trees_HastingsSunrise.json */,
+				9BF9AF1D22A9777700A9D47F /* Trees_KensingtonCedarCottage.json */,
+				9BF9AF0E22A9777500A9D47F /* Trees_Kerrisdale.json */,
+				9BF9AF2022A9777700A9D47F /* Trees_Killarney.json */,
+				9BF9AF1622A9777600A9D47F /* Trees_Kitsilano.json */,
+				9BF9AF1822A9777600A9D47F /* Trees_Marpole.json */,
+				9BF9AF1022A9777500A9D47F /* Trees_MountPleasant.json */,
+				9BF9AF1B22A9777600A9D47F /* Trees_Oakridge.json */,
+				9BF9AF2222A9777700A9D47F /* Trees_RenfrewCollingwood.json */,
+				9BF9AF1322A9777500A9D47F /* Trees_RileyPark.json */,
+				9BF9AF1922A9777600A9D47F /* Trees_Shaughnessy.json */,
+				9BF9AF1C22A9777600A9D47F /* Trees_SouthCambie.json */,
+				9BF9AF1E22A9777700A9D47F /* Trees_Strathcona.json */,
+				9BF9AF1522A9777600A9D47F /* Trees_Sunset.json */,
+				9BF9AF2122A9777700A9D47F /* Trees_VictoriaFraserview.json */,
+				9BF9AF0D22A9777500A9D47F /* Trees_WestEnd.json */,
+				9BF9AF1422A9777500A9D47F /* Trees_WestPointGrey.json */,
+				9BF9AEB022A96D2100A9D47F /* BoundingBoxToFile.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -154,9 +223,8 @@
 		9B7BDD7C22A88638002FE60C /* JsonCoding */ = {
 			isa = PBXGroup;
 			children = (
-				9B8913DE22A49641007F6C3D /* Geometry.swift */,
-				9B8913DF22A49641007F6C3D /* Properties.swift */,
-				9B8913E022A49641007F6C3D /* Feature.swift */,
+				9BF9AEDA22A96D4F00A9D47F /* TreesFile */,
+				9BF9AEDB22A96D7300A9D47F /* BoundingBoxFile.swift */,
 			);
 			path = JsonCoding;
 			sourceTree = "<group>";
@@ -183,8 +251,19 @@
 			children = (
 				9B7BDD7C22A88638002FE60C /* JsonCoding */,
 				9B8913E822A49B87007F6C3D /* TreeData.swift */,
+				9BF9AEDD22A96D9500A9D47F /* BoundingBoxToFilename.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		9BF9AEDA22A96D4F00A9D47F /* TreesFile */ = {
+			isa = PBXGroup;
+			children = (
+				9B8913DE22A49641007F6C3D /* Geometry.swift */,
+				9B8913DF22A49641007F6C3D /* Properties.swift */,
+				9B8913E022A49641007F6C3D /* Feature.swift */,
+			);
+			path = TreesFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +347,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0B9E1B22A88D3B00AE4485 /* smalltrees.json in Resources */,
+				9BF9AF2322A9777700A9D47F /* Trees_WestEnd.json in Resources */,
+				9BF9AEC722A96D2600A9D47F /* BoundingBoxToFile.json in Resources */,
+				9BF9AF3322A9777700A9D47F /* Trees_KensingtonCedarCottage.json in Resources */,
+				9BF9AF3022A9777700A9D47F /* Trees_Fairview.json in Resources */,
+				9BF9AF2722A9777700A9D47F /* Trees_DunbarSouthlands.json in Resources */,
+				9BF9AF2D22A9777700A9D47F /* Trees_GrandviewWoodland.json in Resources */,
+				9BF9AF2F22A9777700A9D47F /* Trees_Shaughnessy.json in Resources */,
+				9BF9AF2B22A9777700A9D47F /* Trees_Sunset.json in Resources */,
+				9BF9AF2622A9777700A9D47F /* Trees_MountPleasant.json in Resources */,
+				9BF9AF2A22A9777700A9D47F /* Trees_WestPointGrey.json in Resources */,
 				9B315F0322A493540021C5F0 /* Assets.xcassets in Resources */,
+				9BF9AF2C22A9777700A9D47F /* Trees_Kitsilano.json in Resources */,
+				9BF9AF2822A9777700A9D47F /* Trees_HastingsSunrise.json in Resources */,
+				9BF9AF2522A9777700A9D47F /* Trees_Downtown.json in Resources */,
+				9BF9AF3122A9777700A9D47F /* Trees_Oakridge.json in Resources */,
+				9BF9AF2422A9777700A9D47F /* Trees_Kerrisdale.json in Resources */,
+				9BF9AF3422A9777700A9D47F /* Trees_Strathcona.json in Resources */,
 				9B0B9E1422A88C6600AE4485 /* LaunchScreen.storyboard in Resources */,
+				9BF9AF2922A9777700A9D47F /* Trees_RileyPark.json in Resources */,
+				9BF9AF3822A9777700A9D47F /* Trees_RenfrewCollingwood.json in Resources */,
+				9BF9AF3722A9777700A9D47F /* Trees_VictoriaFraserview.json in Resources */,
+				9BF9AF3522A9777700A9D47F /* Trees_ArbutusRidge.json in Resources */,
+				9BF9AF2E22A9777700A9D47F /* Trees_Marpole.json in Resources */,
+				9BF9AF3222A9777700A9D47F /* Trees_SouthCambie.json in Resources */,
 				9B315F0122A493520021C5F0 /* Main.storyboard in Resources */,
+				9BF9AF3622A9777700A9D47F /* Trees_Killarney.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +380,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF9AE4922A8D5D800A9D47F /* smalltrees.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +391,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8913E322A49641007F6C3D /* Properties.swift in Sources */,
+				9BF9AEDE22A96D9500A9D47F /* BoundingBoxToFilename.swift in Sources */,
 				9B8913E922A49B87007F6C3D /* TreeData.swift in Sources */,
 				9B8913E222A49641007F6C3D /* Geometry.swift in Sources */,
 				9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */,
+				9BF9AEDC22A96D7300A9D47F /* BoundingBoxFile.swift in Sources */,
 				9B8913E422A49641007F6C3D /* Feature.swift in Sources */,
-				9BA8D65F22A8859000379399 /* BoundingBox.swift in Sources */,
+				9BA8D65F22A8859000379399 /* MapRectBoundingBox.swift in Sources */,
 				9B66352622A8574900D4CF96 /* TreeAnnotation.swift in Sources */,
 				9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */,
 				9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */,
