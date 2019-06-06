@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Vancouver Street Trees-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="VancouverStreetTrees" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2n6-Se-01c"/>
+                    <navigationItem key="navigationItem" title="Vancouver Street Trees" id="2n6-Se-01c">
+                        <barButtonItem key="rightBarButtonItem" title="i" id="Nnu-Kb-B0f">
+                            <connections>
+                                <segue destination="fKY-Yc-ErF" kind="show" id="48g-g7-vDb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="GqQ-qF-JVb" id="KIC-FM-PYv"/>
                     </connections>
@@ -39,6 +45,140 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="85.714285714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3gY-kc-awz">
+            <objects>
+                <viewController id="fKY-Yc-ErF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zDb-w5-bl2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tree data source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV1-Rd-KzV">
+                                <rect key="frame" x="20" y="108" width="212" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-jH-Tgh">
+                                <rect key="frame" x="20" y="144.5" width="374" height="59"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Data is provided by the City of Vancouver Open Data Catalogue.  License:  ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="vancouver.ca/open-government-licence">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.54901999999999995" green="0.32549" blue="0.79215999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <color key="NSStrokeColor" red="0.0078399999999999997" green="0.47450999999999999" blue="0.69411999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                            <color key="NSUnderlineColor" red="0.54901999999999995" green="0.32549" blue="0.79215999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-8e-WUb">
+                                <rect key="frame" x="20" y="235" width="178" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-r0-tDU">
+                                <rect key="frame" x="20" y="273" width="374" height="37"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="&quot;Cherry Blossoms 2013&quot;">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99607999999999997" green="0.99607999999999997" blue="0.99607999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.090200000000000002" green="0.47450999999999999" blue="0.72941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <url key="NSLink" string="https://www.flickr.com/photos/34597907@N03/8614468281"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.090200000000000002" green="0.47450999999999999" blue="0.72941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" by ">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99607999999999997" green="0.99607999999999997" blue="0.99607999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.039219999999999998" green="0.039219999999999998" blue="0.039219999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.039219999999999998" green="0.039219999999999998" blue="0.039219999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="WhyKenFotos">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99607999999999997" green="0.99607999999999997" blue="0.99607999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.090200000000000002" green="0.47450999999999999" blue="0.72941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <url key="NSLink" string="https://www.flickr.com/photos/34597907@N03"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.090200000000000002" green="0.47450999999999999" blue="0.72941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" is licensed under ">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99607999999999997" green="0.99607999999999997" blue="0.99607999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.039219999999999998" green="0.039219999999999998" blue="0.039219999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.039219999999999998" green="0.039219999999999998" blue="0.039219999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CC BY 2.0 ">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99607999999999997" green="0.99607999999999997" blue="0.99607999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.090200000000000002" green="0.47450999999999999" blue="0.72941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <url key="NSLink" string="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=rich"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.090200000000000002" green="0.47450999999999999" blue="0.72941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ifo-r0-tDU" firstAttribute="leading" secondItem="TpO-8e-WUb" secondAttribute="leading" id="ArV-jg-tQh"/>
+                            <constraint firstItem="TpO-8e-WUb" firstAttribute="leading" secondItem="wV1-Rd-KzV" secondAttribute="leading" id="Dwo-Ki-G2D"/>
+                            <constraint firstItem="Ifo-r0-tDU" firstAttribute="firstBaseline" secondItem="TpO-8e-WUb" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="IcO-DG-0Lw"/>
+                            <constraint firstItem="wV1-Rd-KzV" firstAttribute="top" secondItem="s5r-61-Pai" secondAttribute="top" constant="20" id="K2b-M6-QZp"/>
+                            <constraint firstItem="wV1-Rd-KzV" firstAttribute="leading" secondItem="s5r-61-Pai" secondAttribute="leading" constant="20" id="UdW-8o-gFy"/>
+                            <constraint firstItem="I3D-jH-Tgh" firstAttribute="firstBaseline" secondItem="wV1-Rd-KzV" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="V8E-2q-cK4"/>
+                            <constraint firstItem="I3D-jH-Tgh" firstAttribute="leading" secondItem="wV1-Rd-KzV" secondAttribute="leading" id="lP0-yf-0KY"/>
+                            <constraint firstAttribute="trailing" secondItem="I3D-jH-Tgh" secondAttribute="trailing" constant="20" symbolic="YES" id="rjm-cl-VKo"/>
+                            <constraint firstItem="TpO-8e-WUb" firstAttribute="top" secondItem="I3D-jH-Tgh" secondAttribute="bottom" constant="31.5" id="ty9-X4-crZ"/>
+                            <constraint firstItem="Ifo-r0-tDU" firstAttribute="trailing" secondItem="I3D-jH-Tgh" secondAttribute="trailing" id="zrY-hS-PQR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s5r-61-Pai"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRb-Sq-f3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="185.49107142857142"/>
         </scene>
         <!--Wikipedia View Controller-->
         <scene sceneID="zfR-TV-doe">
@@ -72,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg2-DS-eaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="101"/>
+            <point key="canvasLocation" x="2462" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nbg-Zg-gbj">

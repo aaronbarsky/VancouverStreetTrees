@@ -12,7 +12,6 @@
 		9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFD22A493520021C5F0 /* MapViewController.swift */; };
 		9B315F0122A493520021C5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B315EFF22A493520021C5F0 /* Main.storyboard */; };
 		9B315F0322A493540021C5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B315F0222A493540021C5F0 /* Assets.xcassets */; };
-		9B315F1122A493540021C5F0 /* VancouverStreetTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */; };
 		9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B510D6422A5C50900613E38 /* WikipediaViewController.swift */; };
 		9B66352222A8517F00D4CF96 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B66352122A8517F00D4CF96 /* WebKit.framework */; };
 		9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66352322A8571100D4CF96 /* UIColor+hex.swift */; };
@@ -22,7 +21,6 @@
 		9B8913E422A49641007F6C3D /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E022A49641007F6C3D /* Feature.swift */; };
 		9B8913E922A49B87007F6C3D /* TreeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8913E822A49B87007F6C3D /* TreeData.swift */; };
 		9BA8D65F22A8859000379399 /* MapRectBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8D65E22A8859000379399 /* MapRectBoundingBox.swift */; };
-		9BF9AE4B22A8D5EB00A9D47F /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */; };
 		9BF9AEC722A96D2600A9D47F /* BoundingBoxToFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AEB022A96D2100A9D47F /* BoundingBoxToFile.json */; };
 		9BF9AEDC22A96D7300A9D47F /* BoundingBoxFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AEDB22A96D7300A9D47F /* BoundingBoxFile.swift */; };
 		9BF9AEDE22A96D9500A9D47F /* BoundingBoxToFilename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AEDD22A96D9500A9D47F /* BoundingBoxToFilename.swift */; };
@@ -50,6 +48,7 @@
 		9BF9AF3822A9777700A9D47F /* Trees_RenfrewCollingwood.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9AF2222A9777700A9D47F /* Trees_RenfrewCollingwood.json */; };
 		9BF9AF3A22A97C3900A9D47F /* TreeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AF3922A97C3900A9D47F /* TreeRepository.swift */; };
 		9BF9AF3D22A97EAD00A9D47F /* GenusColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AF3C22A97EAD00A9D47F /* GenusColors.swift */; };
+		9BF9AF4022A9A62600A9D47F /* TreeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AF3F22A9A62600A9D47F /* TreeRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +70,6 @@
 		9B315F0022A493520021C5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B315F0222A493540021C5F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B315F0C22A493540021C5F0 /* VancouverStreetTreesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VancouverStreetTreesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VancouverStreetTreesTests.swift; sourceTree = "<group>"; };
 		9B315F1222A493540021C5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B510D6422A5C50900613E38 /* WikipediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaViewController.swift; sourceTree = "<group>"; };
 		9B66352122A8517F00D4CF96 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -82,7 +80,6 @@
 		9B8913E022A49641007F6C3D /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		9B8913E822A49B87007F6C3D /* TreeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeData.swift; sourceTree = "<group>"; };
 		9BA8D65E22A8859000379399 /* MapRectBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRectBoundingBox.swift; sourceTree = "<group>"; };
-		9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		9BF9AEB022A96D2100A9D47F /* BoundingBoxToFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BoundingBoxToFile.json; sourceTree = "<group>"; };
 		9BF9AEDB22A96D7300A9D47F /* BoundingBoxFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxFile.swift; sourceTree = "<group>"; };
 		9BF9AEDD22A96D9500A9D47F /* BoundingBoxToFilename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxToFilename.swift; sourceTree = "<group>"; };
@@ -110,6 +107,7 @@
 		9BF9AF2222A9777700A9D47F /* Trees_RenfrewCollingwood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trees_RenfrewCollingwood.json; sourceTree = "<group>"; };
 		9BF9AF3922A97C3900A9D47F /* TreeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeRepository.swift; sourceTree = "<group>"; };
 		9BF9AF3C22A97EAD00A9D47F /* GenusColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenusColors.swift; sourceTree = "<group>"; };
+		9BF9AF3F22A9A62600A9D47F /* TreeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,9 +207,8 @@
 		9B315F0F22A493540021C5F0 /* VancouverStreetTreesTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B315F1022A493540021C5F0 /* VancouverStreetTreesTests.swift */,
 				9B315F1222A493540021C5F0 /* Info.plist */,
-				9BF9AE4A22A8D5EB00A9D47F /* MapViewControllerTests.swift */,
+				9BF9AF3F22A9A62600A9D47F /* TreeRepositoryTests.swift */,
 			);
 			path = VancouverStreetTreesTests;
 			sourceTree = "<group>";
@@ -417,8 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B315F1122A493540021C5F0 /* VancouverStreetTreesTests.swift in Sources */,
-				9BF9AE4B22A8D5EB00A9D47F /* MapViewControllerTests.swift in Sources */,
+				9BF9AF4022A9A62600A9D47F /* TreeRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

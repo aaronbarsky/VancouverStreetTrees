@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 struct GenusColors {
+    static let shared = GenusColors()
+    private init() {}
     let genusToColor:[String:Int] = [
         "ABIES": 0xe57e39,
         "ACER": 0x6d731d,

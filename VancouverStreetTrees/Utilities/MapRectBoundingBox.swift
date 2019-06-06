@@ -7,7 +7,6 @@ struct MapRectBoundingBox {
     let max: CLLocationCoordinate2D
 
     let cgRect: CGRect
-
     init(rect: MKMapRect) {
         let bottomLeft = MKMapPoint(x: rect.origin.x, y: rect.maxY)
         let topRight = MKMapPoint(x: rect.maxX, y: rect.origin.y)

@@ -24,7 +24,7 @@ class TreeRepository {
         unloadedRegions = Set(allRegions)
     }
 
-    func unloadedAnnoationsFor(boundingBox:CGRect) -> [TreeAnnotation] {
+    func unloadedAnnotationsFor(boundingBox:CGRect) -> [TreeAnnotation] {
         var annotations:[TreeAnnotation] = []
         for region in unloadedRegions{
             if region.rect.intersects(boundingBox) {

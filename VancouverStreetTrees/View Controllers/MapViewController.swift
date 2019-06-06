@@ -16,7 +16,6 @@ class MapViewController: UIViewController {
 
     var locationManager:CLLocationManager!
     let treeRepository = TreeRepository()
-    let genusColors = GenusColors()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,6 @@ class MapViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: animated)
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
@@ -75,7 +73,7 @@ extension MapViewController:MKMapViewDelegate {
 
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         let mapRectBoundingBox = MapRectBoundingBox(rect: mapView.visibleMapRect)
-        let newAnnotations = treeRepository.unloadedAnnoationsFor(boundingBox: mapRectBoundingBox.cgRect)
+        let newAnnotations = treeRepository.unloadedAnnotationsFor(boundingBox: mapRectBoundingBox.cgRect)
         mapView.addAnnotations(newAnnotations)
     }
 
@@ -89,8 +87,7 @@ extension MapViewController:MKMapViewDelegate {
             markerAnnotationView.canShowCallout = false
             markerAnnotationView.glyphText = String(treeAnnotation.feature.properties.genusName.first ?? " ") + String(treeAnnotation.feature.properties.speciesName.first ?? " ")
             markerAnnotationView.glyphImage = nil
-            let color = genusColors.colorFor(genus: treeAnnotation.feature.properties.genusName)
-            markerAnnotationView.markerTintColor = color
+            markerAnnotationView.markerTintColor = treeAnnotation.color()
             }
         return view
     }
@@ -101,19 +98,12 @@ extension MapViewController:MKMapViewDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let wikipediaVC = storyboard.instantiateViewController(withIdentifier: "WikipediaVC") as! WikipediaViewController
             _ = wikipediaVC.view
-            let url = detailURLFor(feature: treeAnnotation.feature)!
+            let url = treeAnnotation.detailURL()!
             let urlRequest = URLRequest(url: url)
             wikipediaVC.webView.load(urlRequest)
-            navigationController?.setNavigationBarHidden(false, animated: true)
             navigationController?.pushViewController(wikipediaVC, animated: true)
         }
     }
 
-    func detailURLFor(feature:Feature) -> URL? {
-        //Some species end in "  x" to signify a hybrid.  The spaces are invalid
-        //url characters and what's more, won't be found in wikipedia
-        let species = feature.properties.speciesName.lowercased().split(separator: " ").first!
-        let genus = feature.properties.genusName.capitalized.split(separator: " ").first!
-        return URL(string: "https://en.wikipedia.org/wiki/\(genus)_\(species)")
-    }
+
 }

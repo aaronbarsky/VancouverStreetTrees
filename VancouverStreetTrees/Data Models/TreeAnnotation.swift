@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 class TreeAnnotation:MKPointAnnotation {
     let feature:Feature
+
     init (feature:Feature) {
         self.feature = feature
         super.init()
@@ -17,5 +18,17 @@ class TreeAnnotation:MKPointAnnotation {
         self.title = feature.properties.commonName
         self.subtitle = feature.properties.genusName + " " + feature.properties.speciesName + " " + feature.properties.cultivarName
 
+    }
+
+    func detailURL() -> URL? {
+        //Some species end in "  x" to signify a hybrid.  The spaces are invalid
+        //url characters and what's more, won't be found in wikipedia
+        let species = feature.properties.speciesName.lowercased().split(separator: " ").first!
+        let genus = feature.properties.genusName.capitalized.split(separator: " ").first!
+        return URL(string: "https://en.wikipedia.org/wiki/\(genus)_\(species)")
+    }
+
+    func color() -> UIColor {
+        return GenusColors.shared.colorFor(genus: feature.properties.genusName)
     }
 }
