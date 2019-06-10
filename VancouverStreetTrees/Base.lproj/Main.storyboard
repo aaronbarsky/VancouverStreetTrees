@@ -21,12 +21,25 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-qF-JVb">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Refresh" translatesAutoresizingMaskIntoConstraints="NO" id="4HR-ZX-OKe">
+                                <rect key="frame" x="344" y="812" width="50" height="50"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RIJ-vn-MR5"/>
+                                    <constraint firstAttribute="width" constant="50" id="cYR-eg-d63"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HtV-JJ-aTc" appends="YES" id="cBa-a5-BeE"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GqQ-qF-JVb" secondAttribute="trailing" id="2P0-bK-LBY"/>
+                            <constraint firstItem="4HR-ZX-OKe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="N5F-km-fWu"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f9U-yq-uvb"/>
                             <constraint firstAttribute="bottom" secondItem="GqQ-qF-JVb" secondAttribute="bottom" id="ocq-h3-Fy3"/>
+                            <constraint firstItem="4HR-ZX-OKe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rOy-Fx-0Hh"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wln-Li-1WB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,9 +53,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="GqQ-qF-JVb" id="KIC-FM-PYv"/>
+                        <outlet property="refreshButton" destination="4HR-ZX-OKe" id="OmV-30-HiG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HtV-JJ-aTc" userLabel="Refresh Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="refreshTapped:" destination="BYZ-38-t0r" id="yRb-wQ-SZd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="85.714285714285708"/>
         </scene>
@@ -233,4 +252,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="-588.61607142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Refresh" width="25" height="25"/>
+    </resources>
 </document>

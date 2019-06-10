@@ -14,7 +14,8 @@ class MapViewController: UIViewController {
     let markerReuseID = UUID().uuidString
     @IBOutlet weak var mapView: MKMapView!
 
-    var locationManager:CLLocationManager!
+	@IBOutlet weak var refreshButton: UIImageView!
+	var locationManager:CLLocationManager!
     let treeRepository = TreeRepository()
 
     override func viewDidLoad() {
@@ -22,7 +23,6 @@ class MapViewController: UIViewController {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier:markerReuseID)
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapView.setUserTrackingMode(.follow, animated: true)
         startLocationManager()
     }
 
@@ -36,6 +36,7 @@ class MapViewController: UIViewController {
             locationManager.startUpdatingLocation()
         } else {
             setViewToCityCenter()
+			refreshButton.isHidden = true
         }
     }
 
@@ -54,6 +55,11 @@ class MapViewController: UIViewController {
         let region = MKCoordinateRegion(center: vancouverCenter, latitudinalMeters: 2500, longitudinalMeters: 2500)
         mapView.setRegion(region, animated: false)
     }
+	@IBAction func refreshTapped(_ sender: Any) {
+		if CLLocationManager.locationServicesEnabled() {
+			locationManager.startUpdatingLocation()
+		}
+	}
 }
 
 extension MapViewController:CLLocationManagerDelegate {
@@ -62,14 +68,17 @@ extension MapViewController:CLLocationManagerDelegate {
             setViewToCityCenter()
         }
     }
+	
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		if let location = locations.last {
+			let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 0.2, longitudinalMeters: 0.2)
+			mapView.setRegion(region, animated: false)
+			locationManager.stopUpdatingLocation()
+		}
+	}
 }
 
 extension MapViewController:MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 0.2, longitudinalMeters: 0.2)
-        mapView.setRegion(region, animated: false)
-
-    }
 
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         let mapRectBoundingBox = MapRectBoundingBox(rect: mapView.visibleMapRect)
