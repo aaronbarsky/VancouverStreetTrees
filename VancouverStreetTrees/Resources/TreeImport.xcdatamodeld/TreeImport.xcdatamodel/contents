@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Tree" representedClassName="Tree" syncable="YES" codeGenerationType="class">
+        <attribute name="commonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cultivarName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="datePlanted" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="diameter" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="genusName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speciesName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="treeId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <fetchIndex name="byPropertyIndex">
+            <fetchIndexElement property="longitude" type="RTree" order="ascending"/>
+            <fetchIndexElement property="latitude" type="RTree" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <elements>
+        <element name="Tree" positionX="-18" positionY="27" width="128" height="180"/>
+    </elements>
+</model>

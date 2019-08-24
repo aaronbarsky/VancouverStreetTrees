@@ -8,21 +8,32 @@
 
 import UIKit
 import MapKit
-
+import CoreData
 class MapViewController: UIViewController {
 
     let markerReuseID = UUID().uuidString
     @IBOutlet weak var mapView: MKMapView!
 
 	@IBOutlet weak var refreshButton: UIImageView!
+	@IBOutlet weak var zoomInMessage: UIView!
 	var locationManager:CLLocationManager!
+	var animateLocationChange = false
     let treeRepository = TreeRepository()
+	var moc:NSManagedObjectContext!
+	var hiddenAnnotations:[MKAnnotation]?
+	
+	let minimumZoomLevelForAnnotations = 16
+	
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier:markerReuseID)
         mapView.delegate = self
         mapView.showsUserLocation = true
+//		zoomInMessage.layer.borderColor = UIColor.gray.cgColor
+//		zoomInMessage.layer.borderWidth = 1.0
+		zoomInMessage.layer.cornerRadius = 18
         startLocationManager()
     }
 
@@ -39,27 +50,20 @@ class MapViewController: UIViewController {
 			refreshButton.isHidden = true
         }
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        locationManager.stopUpdatingLocation()
-    }
-
+	
     func setViewToCityCenter() {
         let vancouverCenter = CLLocationCoordinate2D(latitude: 49.255, longitude: -123.14)
         let region = MKCoordinateRegion(center: vancouverCenter, latitudinalMeters: 2500, longitudinalMeters: 2500)
-        mapView.setRegion(region, animated: false)
+        mapView.setRegion(region, animated: animateLocationChange)
     }
 	@IBAction func refreshTapped(_ sender: Any) {
 		if CLLocationManager.locationServicesEnabled() {
+			animateLocationChange = true
 			locationManager.startUpdatingLocation()
 		}
 	}
+	
+	
 }
 
 extension MapViewController:CLLocationManagerDelegate {
@@ -72,30 +76,53 @@ extension MapViewController:CLLocationManagerDelegate {
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 		if let location = locations.last {
 			let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 0.2, longitudinalMeters: 0.2)
-			mapView.setRegion(region, animated: false)
+			mapView.setRegion(region, animated: animateLocationChange)
 			locationManager.stopUpdatingLocation()
 		}
 	}
 }
 
 extension MapViewController:MKMapViewDelegate {
-
-    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        let mapRectBoundingBox = MapRectBoundingBox(rect: mapView.visibleMapRect)
-        let newAnnotations = treeRepository.unloadedAnnotationsFor(boundingBox: mapRectBoundingBox.cgRect)
-        mapView.addAnnotations(newAnnotations)
-    }
+	
+	func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+		hideOrRestoreAnnotations(mapView)
+		if mapView.zoomLevel() > minimumZoomLevelForAnnotations {
+			let mapRectBoundingBox = MapRectBoundingBox(rect: mapView.visibleMapRect)
+			mapView.addAnnotations(treeRepository.unloadedAnnotationsFor(mapRectBoundingBox: mapRectBoundingBox))
+		}
+	}
+	
+	func hideOrRestoreAnnotations(_ mapView: MKMapView) {
+		if mapView.zoomLevel() > minimumZoomLevelForAnnotations {
+			if let hiddenAnnotations = hiddenAnnotations {
+				mapView.addAnnotations(hiddenAnnotations)
+				self.hiddenAnnotations = nil
+				UIView.animate(withDuration: 0.25) {
+					self.zoomInMessage.alpha = 0.0
+				}
+			}
+		} else {
+			if hiddenAnnotations == nil {
+				hiddenAnnotations = mapView.annotations
+				mapView.removeAnnotations(mapView.annotations)
+				UIView.animate(withDuration: 0.25) {
+					self.zoomInMessage.alpha = 1.0
+				}
+			}
+		}
+	}
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let treeAnnotation = annotation as? TreeAnnotation else {
             return nil
         }
+		
         let view = mapView.dequeueReusableAnnotationView(withIdentifier: markerReuseID)
         if let markerAnnotationView = view as? MKMarkerAnnotationView {
             markerAnnotationView.annotation = treeAnnotation
             markerAnnotationView.canShowCallout = false
-            markerAnnotationView.glyphText = String(treeAnnotation.feature.properties.genusName.first ?? " ") + String(treeAnnotation.feature.properties.speciesName.first ?? " ")
-            markerAnnotationView.glyphImage = nil
+            markerAnnotationView.glyphText = treeAnnotation.glyphText()
+			markerAnnotationView.glyphImage = nil
             markerAnnotationView.markerTintColor = treeAnnotation.color()
             }
         return view
@@ -107,7 +134,7 @@ extension MapViewController:MKMapViewDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let wikipediaVC = storyboard.instantiateViewController(withIdentifier: "WikipediaVC") as! WikipediaViewController
             _ = wikipediaVC.view
-            let url = treeAnnotation.detailURL()!
+            let url = treeAnnotation.detailURL()
             let urlRequest = URLRequest(url: url)
             wikipediaVC.webView.load(urlRequest)
             navigationController?.pushViewController(wikipediaVC, animated: true)

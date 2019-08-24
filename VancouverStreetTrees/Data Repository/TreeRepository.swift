@@ -7,35 +7,47 @@
 //
 
 import Foundation
-import CoreGraphics
+import CoreData
+
 class TreeRepository {
-    var unloadedRegions:Set<BoundingBoxToFilename>
+	
+	var loadedTreeIds:Set<Int32> = []
+	
+	let persistentContainer: NSPersistentContainer = {
+		let container = NSPersistentContainer(name: "TreeImport")
+		container.loadPersistentStoresWithPreload() { (storeDescription, error) in
+			if let error = error as NSError? {
+				fatalError("Unresolved error \(error), \(error.userInfo)")
+			}
+		}
+		return container
+	}()
+	
     init () {
-        let regionMapURL = Bundle.main.url(forResource: "BoundingBoxToFile", withExtension: "json")!
-        let regionMapData = try! Data(contentsOf: regionMapURL)
-        let regionMap = try! JSONDecoder().decode([BoundingBoxFile].self, from: regionMapData)
-        let allRegions:[BoundingBoxToFilename] = regionMap.map {
-            let cgRect = CGRect(x: CGFloat($0.minLng),
-                                y: CGFloat($0.minLat),
-                                width: CGFloat($0.maxLng - $0.minLng),
-                                height: CGFloat($0.maxLat - $0.minLat) )
-            return BoundingBoxToFilename(rect: cgRect, filename: $0.filename)
-        }
-        unloadedRegions = Set(allRegions)
+		
     }
-
-    func unloadedAnnotationsFor(boundingBox:CGRect) -> [TreeAnnotation] {
-        var annotations:[TreeAnnotation] = []
-        for region in unloadedRegions{
-            if region.rect.intersects(boundingBox) {
-                print ("Loading \(region.filename)")
-                unloadedRegions.remove(region)
-                let regionTrees = region.load()
-                let treeAnnotations = regionTrees.map { TreeAnnotation(feature: $0) }
-                annotations += treeAnnotations
-            }
-        }
-        return annotations
-    }
-
+	
+	func unloadedAnnotationsFor(mapRectBoundingBox:MapRectBoundingBox)->[TreeAnnotation] {
+		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tree")
+		fetchRequest.predicate = NSPredicate(format: """
+			latitude >= \(mapRectBoundingBox.min.latitude) AND
+			latitude <= \(mapRectBoundingBox.max.latitude) AND
+			longitude >= \(mapRectBoundingBox.min.longitude) AND
+			longitude <= \(mapRectBoundingBox.max.longitude)
+			"""
+		)
+		let trees = try! persistentContainer.viewContext.fetch(fetchRequest) as! [Tree]
+		
+		let newTrees = trees.filter{!loadedTreeIds.contains($0.treeId)}
+		let newTreeIds = newTrees.map {$0.treeId}
+		loadedTreeIds.formUnion(Set(newTreeIds))
+		return newTrees.map {TreeAnnotation(tree: $0)}
+	}
+	
+	func allTrees() -> [TreeAnnotation] {
+		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tree")
+		let trees = try! persistentContainer.viewContext.fetch(fetchRequest) as! [Tree]		
+		return trees.map {TreeAnnotation(tree: $0)}
+		
+	}
 }

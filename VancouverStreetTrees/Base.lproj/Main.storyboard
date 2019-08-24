@@ -32,15 +32,35 @@
                                     <outletCollection property="gestureRecognizers" destination="HtV-JJ-aTc" appends="YES" id="cBa-a5-BeE"/>
                                 </connections>
                             </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Ob-vtu">
+                                <rect key="frame" x="55" y="108" width="304" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom in to see trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-RI-UtO">
+                                        <rect key="frame" x="73.5" y="9.5" width="157" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.5490196078431373" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aYN-RI-UtO" firstAttribute="centerY" secondItem="f6A-Ob-vtu" secondAttribute="centerY" id="9mg-VC-uzu"/>
+                                    <constraint firstItem="aYN-RI-UtO" firstAttribute="centerX" secondItem="f6A-Ob-vtu" secondAttribute="centerX" id="Jso-44-nma"/>
+                                    <constraint firstAttribute="height" constant="40" id="aXb-fK-pLK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GqQ-qF-JVb" secondAttribute="trailing" id="2P0-bK-LBY"/>
+                            <constraint firstItem="f6A-Ob-vtu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="IT1-41-3oN"/>
                             <constraint firstItem="4HR-ZX-OKe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="N5F-km-fWu"/>
+                            <constraint firstItem="f6A-Ob-vtu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UO3-fx-gAI"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f9U-yq-uvb"/>
                             <constraint firstAttribute="bottom" secondItem="GqQ-qF-JVb" secondAttribute="bottom" id="ocq-h3-Fy3"/>
                             <constraint firstItem="4HR-ZX-OKe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rOy-Fx-0Hh"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wln-Li-1WB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f6A-Ob-vtu" secondAttribute="trailing" constant="55" id="yTz-CT-gqE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,6 +74,7 @@
                     <connections>
                         <outlet property="mapView" destination="GqQ-qF-JVb" id="KIC-FM-PYv"/>
                         <outlet property="refreshButton" destination="4HR-ZX-OKe" id="OmV-30-HiG"/>
+                        <outlet property="zoomInMessage" destination="f6A-Ob-vtu" id="Nzw-ON-SsF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -253,6 +274,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Refresh" width="25" height="25"/>
+        <image name="Refresh" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
 </document>
