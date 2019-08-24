@@ -21,6 +21,7 @@ class MapViewController: UIViewController {
     let treeRepository = TreeRepository()
 	var moc:NSManagedObjectContext!
 	var hiddenAnnotations:[MKAnnotation]?
+	var infoPanelViewController:InfoPanelViewController!
 	
 	let minimumZoomLevelForAnnotations = 16
 	
@@ -31,9 +32,7 @@ class MapViewController: UIViewController {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier:markerReuseID)
         mapView.delegate = self
         mapView.showsUserLocation = true
-//		zoomInMessage.layer.borderColor = UIColor.gray.cgColor
-//		zoomInMessage.layer.borderWidth = 1.0
-		zoomInMessage.layer.cornerRadius = 18
+		zoomInMessage.layer.cornerRadius = 16
         startLocationManager()
     }
 
@@ -61,6 +60,10 @@ class MapViewController: UIViewController {
 			animateLocationChange = true
 			locationManager.startUpdatingLocation()
 		}
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		infoPanelViewController = segue.destination as! InfoPanelViewController
 	}
 	
 	
@@ -131,6 +134,8 @@ extension MapViewController:MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let annotation = view.annotation,
             let treeAnnotation = annotation as? TreeAnnotation {
+			infoPanelViewController.bindTo(treeAnnotation: treeAnnotation)
+			/*
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let wikipediaVC = storyboard.instantiateViewController(withIdentifier: "WikipediaVC") as! WikipediaViewController
             _ = wikipediaVC.view
@@ -138,6 +143,7 @@ extension MapViewController:MKMapViewDelegate {
             let urlRequest = URLRequest(url: url)
             wikipediaVC.webView.load(urlRequest)
             navigationController?.pushViewController(wikipediaVC, animated: true)
+*/
         }
     }
 

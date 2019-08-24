@@ -10,6 +10,7 @@
 		9B0B9E1422A88C6600AE4485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1222A88C6600AE4485 /* LaunchScreen.storyboard */; };
 		9B189E7822DC2AC900CF1B30 /* NSPersistentContainer+Preload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B189E7722DC2AC900CF1B30 /* NSPersistentContainer+Preload.swift */; };
 		9B26458E2311E48B001973DE /* MapView+ZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26458D2311E48B001973DE /* MapView+ZoomLevel.swift */; };
+		9B2645902311F962001973DE /* InfoPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26458F2311F962001973DE /* InfoPanelViewController.swift */; };
 		9B315EFC22A493520021C5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFB22A493520021C5F0 /* AppDelegate.swift */; };
 		9B315EFE22A493520021C5F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B315EFD22A493520021C5F0 /* MapViewController.swift */; };
 		9B315F0122A493520021C5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B315EFF22A493520021C5F0 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		9B189E7422DC2A8A00CF1B30 /* Tree+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tree+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9B189E7722DC2AC900CF1B30 /* NSPersistentContainer+Preload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Preload.swift"; sourceTree = "<group>"; };
 		9B26458D2311E48B001973DE /* MapView+ZoomLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView+ZoomLevel.swift"; sourceTree = "<group>"; };
+		9B26458F2311F962001973DE /* InfoPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelViewController.swift; sourceTree = "<group>"; };
 		9B315EF822A493520021C5F0 /* VancouverStreetTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VancouverStreetTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B315EFB22A493520021C5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B315EFD22A493520021C5F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				9B510D6422A5C50900613E38 /* WikipediaViewController.swift */,
 				9B315EFD22A493520021C5F0 /* MapViewController.swift */,
+				9B26458F2311F962001973DE /* InfoPanelViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				9B66352422A8571100D4CF96 /* UIColor+hex.swift in Sources */,
 				9B26458E2311E48B001973DE /* MapView+ZoomLevel.swift in Sources */,
 				9B510D6522A5C50900613E38 /* WikipediaViewController.swift in Sources */,
+				9B2645902311F962001973DE /* InfoPanelViewController.swift in Sources */,
 				9B315EFC22A493520021C5F0 /* AppDelegate.swift in Sources */,
 				9BF9AF3A22A97C3900A9D47F /* TreeRepository.swift in Sources */,
 				9BBAF2A622E5296300F710D6 /* TreeImport.xcdatamodeld in Sources */,
