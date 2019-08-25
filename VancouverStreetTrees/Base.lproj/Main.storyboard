@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy7-mT-fhh">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="VancouverStreetTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-qF-JVb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </mapView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Refresh" translatesAutoresizingMaskIntoConstraints="NO" id="4HR-ZX-OKe">
-                                <rect key="frame" x="344" y="812" width="50" height="50"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Refresh" translatesAutoresizingMaskIntoConstraints="NO" id="4HR-ZX-OKe">
+                                <rect key="frame" x="354" y="84" width="50" height="50"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RIJ-vn-MR5"/>
@@ -33,10 +33,10 @@
                                 </connections>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Ob-vtu">
-                                <rect key="frame" x="55" y="108" width="304" height="40"/>
+                                <rect key="frame" x="107" y="84" width="200" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom in to see trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-RI-UtO">
-                                        <rect key="frame" x="73.5" y="9.5" width="157" height="21"/>
+                                        <rect key="frame" x="21.666666666666657" y="9.6666666666666714" width="157" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -46,11 +46,12 @@
                                 <constraints>
                                     <constraint firstItem="aYN-RI-UtO" firstAttribute="centerY" secondItem="f6A-Ob-vtu" secondAttribute="centerY" id="9mg-VC-uzu"/>
                                     <constraint firstItem="aYN-RI-UtO" firstAttribute="centerX" secondItem="f6A-Ob-vtu" secondAttribute="centerX" id="Jso-44-nma"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ov0-VA-OQU"/>
                                     <constraint firstAttribute="height" constant="40" id="aXb-fK-pLK"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-3J-CSS">
-                                <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="486" width="414" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="p9t-UG-Egx"/>
                                 </constraints>
@@ -63,16 +64,15 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GqQ-qF-JVb" secondAttribute="trailing" id="2P0-bK-LBY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c6S-3J-CSS" secondAttribute="trailing" id="94T-XF-i4I"/>
-                            <constraint firstItem="f6A-Ob-vtu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="IT1-41-3oN"/>
-                            <constraint firstItem="c6S-3J-CSS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-250" id="Jgd-o3-ut2"/>
-                            <constraint firstItem="4HR-ZX-OKe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="N5F-km-fWu"/>
+                            <constraint firstAttribute="bottom" secondItem="c6S-3J-CSS" secondAttribute="bottom" id="JJu-cu-0jg"/>
+                            <constraint firstItem="f6A-Ob-vtu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JuH-gs-SVw"/>
+                            <constraint firstItem="4HR-ZX-OKe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="N5F-km-fWu"/>
                             <constraint firstItem="f6A-Ob-vtu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UO3-fx-gAI"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f9U-yq-uvb"/>
                             <constraint firstItem="c6S-3J-CSS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hza-kq-1Nq"/>
                             <constraint firstAttribute="bottom" secondItem="GqQ-qF-JVb" secondAttribute="bottom" id="ocq-h3-Fy3"/>
-                            <constraint firstItem="4HR-ZX-OKe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rOy-Fx-0Hh"/>
+                            <constraint firstItem="4HR-ZX-OKe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rOy-Fx-0Hh"/>
                             <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wln-Li-1WB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f6A-Ob-vtu" secondAttribute="trailing" constant="55" id="yTz-CT-gqE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -84,6 +84,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="infoPanelBottomConstraint" destination="JJu-cu-0jg" id="ZgZ-Pm-tAP"/>
+                        <outlet property="infoPanelHeightConstraint" destination="p9t-UG-Egx" id="5zL-GC-fVA"/>
                         <outlet property="mapView" destination="GqQ-qF-JVb" id="KIC-FM-PYv"/>
                         <outlet property="refreshButton" destination="4HR-ZX-OKe" id="OmV-30-HiG"/>
                         <outlet property="zoomInMessage" destination="f6A-Ob-vtu" id="Nzw-ON-SsF"/>
@@ -103,17 +105,17 @@
             <objects>
                 <viewController id="fKY-Yc-ErF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zDb-w5-bl2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tree data source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV1-Rd-KzV">
-                                <rect key="frame" x="20" y="108" width="212" height="36"/>
+                                <rect key="frame" x="20" y="84" width="212" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-jH-Tgh">
-                                <rect key="frame" x="20" y="144.5" width="374" height="59"/>
+                                <rect key="frame" x="20" y="120.33333333333331" width="374" height="59"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Data is provided by the City of Vancouver Open Data Catalogue.  License:  ">
                                         <attributes>
@@ -137,13 +139,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-8e-WUb">
-                                <rect key="frame" x="20" y="235" width="178" height="36"/>
+                                <rect key="frame" x="20" y="211" width="178" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-r0-tDU">
-                                <rect key="frame" x="20" y="273" width="374" height="37"/>
+                                <rect key="frame" x="20" y="249" width="374" height="37"/>
                                 <attributedString key="attributedText">
                                     <fragment content="&quot;Cherry Blossoms 2013&quot;">
                                         <attributes>
@@ -237,11 +239,11 @@
             <objects>
                 <viewController storyboardIdentifier="WikipediaVC" id="TLQ-6N-kyD" customClass="WikipediaViewController" customModule="VancouverStreetTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zr6-QE-3Jg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-RE-uCy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -272,7 +274,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xy7-mT-fhh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="foq-pF-KBF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -292,51 +294,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="41K-Np-i6M">
-                                <rect key="frame" x="20" y="20" width="374" height="210"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norway Maple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-3v-6Bd">
-                                        <rect key="frame" x="0.0" y="0.0" width="185.5" height="112.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acer platanoides" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-tL-2Gi">
-                                        <rect key="frame" x="0.0" y="117.5" width="115" height="18"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Mp-rNB">
-                                        <rect key="frame" x="0.0" y="140.5" width="31" height="14.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knI-u6-wNO">
-                                        <rect key="frame" x="0.0" y="160" width="374" height="50"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Norway Maple" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-3v-6Bd">
+                                <rect key="frame" x="21" y="15.999999999999998" width="363" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Acer platanoides" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-tL-2Gi">
+                                <rect key="frame" x="21" y="51.333333333333336" width="363" height="18.000000000000007"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knI-u6-wNO" customClass="UIImageViewAligned" customModule="VancouverStreetTrees" customModuleProvider="target">
+                                <rect key="frame" x="21" y="99.333333333333329" width="373" height="140.66666666666669"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alignLeft" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-0F-nd9">
+                                <rect key="frame" x="189.66666666666666" y="4" width="35" height="4"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="JeI-0h-Vj2"/>
+                                    <constraint firstAttribute="height" constant="4" id="myK-BO-qft"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-Oct-1982" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Mp-rNB">
+                                <rect key="frame" x="21" y="73.333333333333329" width="91" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="41K-Np-i6M" secondAttribute="bottom" constant="20" id="F1T-Zv-Ryp"/>
-                            <constraint firstItem="41K-Np-i6M" firstAttribute="leading" secondItem="bK2-8W-77f" secondAttribute="leading" constant="20" id="Hac-L7-IZy"/>
-                            <constraint firstItem="41K-Np-i6M" firstAttribute="top" secondItem="bK2-8W-77f" secondAttribute="top" constant="20" id="ZAO-Ti-IY4"/>
-                            <constraint firstAttribute="trailing" secondItem="41K-Np-i6M" secondAttribute="trailing" constant="20" id="yaV-RQ-0aZ"/>
+                            <constraint firstItem="ObL-tL-2Gi" firstAttribute="leading" secondItem="fkv-3v-6Bd" secondAttribute="leading" id="6kd-OG-F9K"/>
+                            <constraint firstItem="knI-u6-wNO" firstAttribute="trailing" secondItem="bK2-8W-77f" secondAttribute="trailingMargin" id="6ny-of-nWk"/>
+                            <constraint firstItem="C06-Mp-rNB" firstAttribute="top" secondItem="ObL-tL-2Gi" secondAttribute="bottom" constant="4" id="AVN-K9-mqe"/>
+                            <constraint firstItem="fkv-3v-6Bd" firstAttribute="top" secondItem="qxc-0F-nd9" secondAttribute="bottom" constant="8" id="UXV-xj-2vv"/>
+                            <constraint firstItem="qxc-0F-nd9" firstAttribute="centerX" secondItem="bK2-8W-77f" secondAttribute="centerX" id="Vdb-fS-rg4"/>
+                            <constraint firstItem="qxc-0F-nd9" firstAttribute="top" secondItem="bK2-8W-77f" secondAttribute="top" constant="4" id="gAQ-Dm-VUD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fkv-3v-6Bd" secondAttribute="trailing" constant="10" id="hPd-z5-IFd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="knI-u6-wNO" secondAttribute="bottom" constant="10" id="obO-OR-Fiq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ObL-tL-2Gi" secondAttribute="trailing" constant="10" id="qJm-yG-aQP"/>
+                            <constraint firstItem="knI-u6-wNO" firstAttribute="leading" secondItem="fkv-3v-6Bd" secondAttribute="leading" id="swt-Ph-ss9"/>
+                            <constraint firstItem="C06-Mp-rNB" firstAttribute="leading" secondItem="ObL-tL-2Gi" secondAttribute="leading" id="wzP-Rt-H3i"/>
+                            <constraint firstItem="knI-u6-wNO" firstAttribute="top" secondItem="ObL-tL-2Gi" secondAttribute="bottom" constant="30" id="yHj-ab-ojD"/>
+                            <constraint firstItem="ObL-tL-2Gi" firstAttribute="top" secondItem="fkv-3v-6Bd" secondAttribute="bottom" constant="4" id="ybm-Wu-9F0"/>
+                            <constraint firstItem="fkv-3v-6Bd" firstAttribute="leading" secondItem="bK2-8W-77f" secondAttribute="leadingMargin" constant="1" id="z3I-VY-Wzd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lYz-S9-H26" appends="YES" id="3Zw-it-Zx2"/>
+                            <outletCollection property="gestureRecognizers" destination="Swt-cD-VIa" appends="YES" id="VIH-OG-6uB"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="commonNameLabel" destination="fkv-3v-6Bd" id="Imc-VI-ypS"/>
                         <outlet property="datePlantedLabel" destination="C06-Mp-rNB" id="8xP-5S-UeZ"/>
                         <outlet property="image" destination="knI-u6-wNO" id="snx-nE-RRY"/>
                         <outlet property="latinNameLabel" destination="ObL-tL-2Gi" id="WNl-Lv-Pae"/>
+                        <outlet property="swipeIndicator" destination="qxc-0F-nd9" id="HQd-0b-JKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blm-OL-vfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="lYz-S9-H26">
+                    <connections>
+                        <action selector="swiped:" destination="zSe-xK-gTx" id="YE4-Jq-jA7"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Swt-cD-VIa">
+                    <connections>
+                        <action selector="tapped:" destination="zSe-xK-gTx" id="Sdr-k4-pSg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="189.85507246376812" y="249.77678571428569"/>
+            <point key="canvasLocation" x="189.85507246376812" y="249.45652173913047"/>
         </scene>
     </scenes>
     <resources>

@@ -21,10 +21,10 @@ extension Tree {
     @NSManaged public var cultivarName: String?
     @NSManaged public var datePlanted: NSDate?
     @NSManaged public var diameter: Float
-    @NSManaged public var genusName: String?
+    @NSManaged public var genusName: String
     @NSManaged public var latitude: Float
     @NSManaged public var longitude: Float
-    @NSManaged public var speciesName: String?
+    @NSManaged public var speciesName: String
     @NSManaged public var treeId: Int32
 
 }

@@ -22,6 +22,8 @@ class MapViewController: UIViewController {
 	var moc:NSManagedObjectContext!
 	var hiddenAnnotations:[MKAnnotation]?
 	var infoPanelViewController:InfoPanelViewController!
+	@IBOutlet weak var infoPanelHeightConstraint: NSLayoutConstraint!
+	@IBOutlet weak var infoPanelBottomConstraint: NSLayoutConstraint!
 	
 	let minimumZoomLevelForAnnotations = 16
 	
@@ -32,9 +34,35 @@ class MapViewController: UIViewController {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier:markerReuseID)
         mapView.delegate = self
         mapView.showsUserLocation = true
+		mapView.showsCompass = false
 		zoomInMessage.layer.cornerRadius = 16
+		refreshButton.layer.shadowRadius = 2
+		refreshButton.layer.shadowOffset = CGSize(width: 2, height: 2)
+		refreshButton.layer.shadowColor = UIColor.gray.cgColor
+		refreshButton.layer.shadowOpacity = 1.0
+		
+		hideInfoPanel(animated: false)
         startLocationManager()
     }
+	
+	func hideInfoPanel(animated:Bool) {
+		infoPanelBottomConstraint.constant = -infoPanelHeightConstraint.constant
+		let duration = animated ? 0.25 : 0.0
+			UIView.animate(withDuration: duration){
+				self.view.layoutIfNeeded()
+		}
+	}
+	
+	func showInfoPanel(animated:Bool) {
+		guard infoPanelBottomConstraint.constant < 0 else {
+			return
+		}
+		infoPanelBottomConstraint.constant = 0
+		let duration = animated ? 0.25 : 0.0
+		UIView.animate(withDuration: duration){
+			self.view.layoutIfNeeded()
+		}
+	}
 
     func startLocationManager() {
 
@@ -63,7 +91,10 @@ class MapViewController: UIViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		infoPanelViewController = segue.destination as! InfoPanelViewController
+		infoPanelViewController = segue.destination as? InfoPanelViewController
+		infoPanelViewController.swipedToDismiss = {[unowned self] in
+			self.hideInfoPanel(animated: true)
+		}
 	}
 	
 	
@@ -134,16 +165,8 @@ extension MapViewController:MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let annotation = view.annotation,
             let treeAnnotation = annotation as? TreeAnnotation {
+			showInfoPanel(animated: true)
 			infoPanelViewController.bindTo(treeAnnotation: treeAnnotation)
-			/*
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let wikipediaVC = storyboard.instantiateViewController(withIdentifier: "WikipediaVC") as! WikipediaViewController
-            _ = wikipediaVC.view
-            let url = treeAnnotation.detailURL()
-            let urlRequest = URLRequest(url: url)
-            wikipediaVC.webView.load(urlRequest)
-            navigationController?.pushViewController(wikipediaVC, animated: true)
-*/
         }
     }
 

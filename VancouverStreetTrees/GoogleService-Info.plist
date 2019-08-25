@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>550833434830-aiucvrfavhjqu81cm8cs801pkko815ph.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.550833434830-aiucvrfavhjqu81cm8cs801pkko815ph</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCkKF6bwIO7iQBPhuaJ1e7d4le4s0i6VxQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>550833434830</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.yellowcedarsoftware.vancouverstreettrees5</string>
+	<key>PROJECT_ID</key>
+	<string>vancouver-street-trees</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vancouver-street-trees.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:550833434830:ios:2fe68b9eaa34419e</string>
+	<key>DATABASE_URL</key>
+	<string>https://vancouver-street-trees.firebaseio.com</string>
+</dict>
+</plist>
