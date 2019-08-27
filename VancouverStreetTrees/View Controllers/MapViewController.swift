@@ -91,9 +91,11 @@ class MapViewController: UIViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		infoPanelViewController = segue.destination as? InfoPanelViewController
-		infoPanelViewController.swipedToDismiss = {[unowned self] in
-			self.hideInfoPanel(animated: true)
+		if segue.destination is InfoPanelViewController {
+			infoPanelViewController = segue.destination as? InfoPanelViewController
+			infoPanelViewController.swipedToDismiss = {[unowned self] in
+				self.hideInfoPanel(animated: true)
+			}
 		}
 	}
 	

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AE57F898E4F738EDD5316AB /* Pods_VancouverStreetTreesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B68B053ACA305084899490 /* Pods_VancouverStreetTreesTests.framework */; };
 		9B0B9E1422A88C6600AE4485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B9E1222A88C6600AE4485 /* LaunchScreen.storyboard */; };
 		9B189E7822DC2AC900CF1B30 /* NSPersistentContainer+Preload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B189E7722DC2AC900CF1B30 /* NSPersistentContainer+Preload.swift */; };
 		9B26458E2311E48B001973DE /* MapView+ZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26458D2311E48B001973DE /* MapView+ZoomLevel.swift */; };
@@ -29,6 +30,7 @@
 		9BF9AF3A22A97C3900A9D47F /* TreeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AF3922A97C3900A9D47F /* TreeRepository.swift */; };
 		9BF9AF3D22A97EAD00A9D47F /* GenusColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AF3C22A97EAD00A9D47F /* GenusColors.swift */; };
 		9BF9AF4022A9A62600A9D47F /* TreeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9AF3F22A9A62600A9D47F /* TreeRepositoryTests.swift */; };
+		DD1110C44D2679AD66679BA4 /* Pods_VancouverStreetTrees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F397CAC0F39212362327C65 /* Pods_VancouverStreetTrees.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		097DBC250A9A558B78DCEDED /* Pods-VancouverStreetTreesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VancouverStreetTreesTests.debug.xcconfig"; path = "Target Support Files/Pods-VancouverStreetTreesTests/Pods-VancouverStreetTreesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44C42427DF8CCE131F20AE0B /* Pods-VancouverStreetTrees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VancouverStreetTrees.release.xcconfig"; path = "Target Support Files/Pods-VancouverStreetTrees/Pods-VancouverStreetTrees.release.xcconfig"; sourceTree = "<group>"; };
+		4F397CAC0F39212362327C65 /* Pods_VancouverStreetTrees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VancouverStreetTrees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71BC6CCB60BF86F7A8C9E191 /* Pods-VancouverStreetTrees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VancouverStreetTrees.debug.xcconfig"; path = "Target Support Files/Pods-VancouverStreetTrees/Pods-VancouverStreetTrees.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0B9E1322A88C6600AE4485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B0B9E1722A88D0B00AE4485 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B189E7322DC2A8A00CF1B30 /* Tree+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tree+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 		9BF9AF3922A97C3900A9D47F /* TreeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeRepository.swift; sourceTree = "<group>"; };
 		9BF9AF3C22A97EAD00A9D47F /* GenusColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenusColors.swift; sourceTree = "<group>"; };
 		9BF9AF3F22A9A62600A9D47F /* TreeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeRepositoryTests.swift; sourceTree = "<group>"; };
+		A5749C2445D272B679159679 /* Pods-VancouverStreetTreesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VancouverStreetTreesTests.release.xcconfig"; path = "Target Support Files/Pods-VancouverStreetTreesTests/Pods-VancouverStreetTreesTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1B68B053ACA305084899490 /* Pods_VancouverStreetTreesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VancouverStreetTreesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B66352222A8517F00D4CF96 /* WebKit.framework in Frameworks */,
+				DD1110C44D2679AD66679BA4 /* Pods_VancouverStreetTrees.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE57F898E4F738EDD5316AB /* Pods_VancouverStreetTreesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +131,7 @@
 				9B315F0F22A493540021C5F0 /* VancouverStreetTreesTests */,
 				9B315EF922A493520021C5F0 /* Products */,
 				9B66352022A8517F00D4CF96 /* Frameworks */,
+				A1D0FD45D5224D4C14B101CA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				9B66352122A8517F00D4CF96 /* WebKit.framework */,
+				4F397CAC0F39212362327C65 /* Pods_VancouverStreetTrees.framework */,
+				D1B68B053ACA305084899490 /* Pods_VancouverStreetTreesTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,6 +210,17 @@
 			path = "Data Repository";
 			sourceTree = "<group>";
 		};
+		A1D0FD45D5224D4C14B101CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71BC6CCB60BF86F7A8C9E191 /* Pods-VancouverStreetTrees.debug.xcconfig */,
+				44C42427DF8CCE131F20AE0B /* Pods-VancouverStreetTrees.release.xcconfig */,
+				097DBC250A9A558B78DCEDED /* Pods-VancouverStreetTreesTests.debug.xcconfig */,
+				A5749C2445D272B679159679 /* Pods-VancouverStreetTreesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B315F1522A493540021C5F0 /* Build configuration list for PBXNativeTarget "VancouverStreetTrees" */;
 			buildPhases = (
+				42C37A8E418AAFCE1F5107F2 /* [CP] Check Pods Manifest.lock */,
 				9B315EF422A493520021C5F0 /* Sources */,
 				9B315EF522A493520021C5F0 /* Frameworks */,
 				9B315EF622A493520021C5F0 /* Resources */,
+				14F101E1635AE33B1A2240B3 /* [CP] Embed Pods Frameworks */,
+				9B8F431B23123A3D00ED8629 /* Setup Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -221,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B315F1822A493540021C5F0 /* Build configuration list for PBXNativeTarget "VancouverStreetTreesTests" */;
 			buildPhases = (
+				310328718B949F8EB83890A7 /* [CP] Check Pods Manifest.lock */,
 				9B315F0822A493540021C5F0 /* Sources */,
 				9B315F0922A493540021C5F0 /* Frameworks */,
 				9B315F0A22A493540021C5F0 /* Resources */,
@@ -296,6 +324,89 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14F101E1635AE33B1A2240B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VancouverStreetTrees/Pods-VancouverStreetTrees-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VancouverStreetTrees/Pods-VancouverStreetTrees-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VancouverStreetTrees/Pods-VancouverStreetTrees-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		310328718B949F8EB83890A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VancouverStreetTreesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42C37A8E418AAFCE1F5107F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VancouverStreetTrees-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B8F431B23123A3D00ED8629 /* Setup Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Setup Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B315EF422A493520021C5F0 /* Sources */ = {
@@ -474,10 +585,12 @@
 		};
 		9B315F1622A493540021C5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71BC6CCB60BF86F7A8C9E191 /* Pods-VancouverStreetTrees.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9486CQ5DH7;
 				INFOPLIST_FILE = VancouverStreetTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -494,6 +607,7 @@
 		};
 		9B315F1722A493540021C5F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44C42427DF8CCE131F20AE0B /* Pods-VancouverStreetTrees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -514,6 +628,7 @@
 		};
 		9B315F1922A493540021C5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 097DBC250A9A558B78DCEDED /* Pods-VancouverStreetTreesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +650,7 @@
 		};
 		9B315F1A22A493540021C5F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5749C2445D272B679159679 /* Pods-VancouverStreetTreesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

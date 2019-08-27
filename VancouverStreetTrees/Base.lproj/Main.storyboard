@@ -51,9 +51,9 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-3J-CSS">
-                                <rect key="frame" x="0.0" y="486" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="566" width="414" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="p9t-UG-Egx"/>
+                                    <constraint firstAttribute="height" constant="170" id="p9t-UG-Egx"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="zSe-xK-gTx" kind="embed" id="C2t-Un-17n"/>
@@ -109,43 +109,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tree data source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV1-Rd-KzV">
-                                <rect key="frame" x="20" y="84" width="212" height="36"/>
+                                <rect key="frame" x="20" y="84" width="374" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-jH-Tgh">
-                                <rect key="frame" x="20" y="120.33333333333331" width="374" height="59"/>
+                                <rect key="frame" x="20" y="120.33333333333331" width="374" height="61"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Data is provided by the City of Vancouver Open Data Catalogue.  License:  ">
+                                    <fragment content="Data is provided by the City of Vancouver Open Data Catalogue.  License: vancouver.ca/open-government-license">
                                         <attributes>
+                                            <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" metaFont="system" size="17"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="vancouver.ca/open-government-licence">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.54901999999999995" green="0.32549" blue="0.79215999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            <color key="NSStrokeColor" red="0.0078399999999999997" green="0.47450999999999999" blue="0.69411999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <integer key="NSUnderline" value="1"/>
-                                            <color key="NSUnderlineColor" red="0.54901999999999995" green="0.32549" blue="0.79215999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-8e-WUb">
-                                <rect key="frame" x="20" y="211" width="178" height="36"/>
+                                <rect key="frame" x="20" y="213" width="374" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-r0-tDU">
-                                <rect key="frame" x="20" y="249" width="374" height="37"/>
+                                <rect key="frame" x="20" y="251" width="374" height="37"/>
                                 <attributedString key="attributedText">
                                     <fragment content="&quot;Cherry Blossoms 2013&quot;">
                                         <attributes>
@@ -223,7 +213,9 @@
                             <constraint firstItem="wV1-Rd-KzV" firstAttribute="leading" secondItem="s5r-61-Pai" secondAttribute="leading" constant="20" id="UdW-8o-gFy"/>
                             <constraint firstItem="I3D-jH-Tgh" firstAttribute="firstBaseline" secondItem="wV1-Rd-KzV" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="V8E-2q-cK4"/>
                             <constraint firstItem="I3D-jH-Tgh" firstAttribute="leading" secondItem="wV1-Rd-KzV" secondAttribute="leading" id="lP0-yf-0KY"/>
+                            <constraint firstItem="s5r-61-Pai" firstAttribute="trailing" secondItem="wV1-Rd-KzV" secondAttribute="trailing" constant="20" id="ox4-gE-WY2"/>
                             <constraint firstAttribute="trailing" secondItem="I3D-jH-Tgh" secondAttribute="trailing" constant="20" symbolic="YES" id="rjm-cl-VKo"/>
+                            <constraint firstItem="s5r-61-Pai" firstAttribute="trailing" secondItem="TpO-8e-WUb" secondAttribute="trailing" constant="20" id="tgb-lG-zR4"/>
                             <constraint firstItem="TpO-8e-WUb" firstAttribute="top" secondItem="I3D-jH-Tgh" secondAttribute="bottom" constant="31.5" id="ty9-X4-crZ"/>
                             <constraint firstItem="Ifo-r0-tDU" firstAttribute="trailing" secondItem="I3D-jH-Tgh" secondAttribute="trailing" id="zrY-hS-PQR"/>
                         </constraints>
@@ -291,27 +283,27 @@
             <objects>
                 <viewController id="zSe-xK-gTx" customClass="InfoPanelViewController" customModule="VancouverStreetTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bK2-8W-77f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Norway Maple" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-3v-6Bd">
-                                <rect key="frame" x="21" y="15.999999999999998" width="363" height="31.333333333333329"/>
+                                <rect key="frame" x="21" y="15.999999999999998" width="281" height="31.333333333333329"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Acer platanoides" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-tL-2Gi">
-                                <rect key="frame" x="21" y="51.333333333333336" width="363" height="18.000000000000007"/>
+                                <rect key="frame" x="21" y="51.333333333333336" width="281" height="18.000000000000007"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knI-u6-wNO" customClass="UIImageViewAligned" customModule="VancouverStreetTrees" customModuleProvider="target">
-                                <rect key="frame" x="21" y="99.333333333333329" width="373" height="140.66666666666669"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alignLeft" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-Oct-1982" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Mp-rNB">
+                                <rect key="frame" x="21" y="73.333333333333329" width="393" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-0F-nd9">
                                 <rect key="frame" x="189.66666666666666" y="4" width="35" height="4"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -320,31 +312,37 @@
                                     <constraint firstAttribute="height" constant="4" id="myK-BO-qft"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-Oct-1982" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Mp-rNB">
-                                <rect key="frame" x="21" y="73.333333333333329" width="91" height="18"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knI-u6-wNO" customClass="UIImageViewAligned" customModule="VancouverStreetTrees" customModuleProvider="target">
+                                <rect key="frame" x="314" y="16" width="80" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PCA-bk-jKq"/>
+                                    <constraint firstAttribute="width" constant="80" id="guO-9Q-A9m"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alignLeft" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alignTop" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alignRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ObL-tL-2Gi" firstAttribute="leading" secondItem="fkv-3v-6Bd" secondAttribute="leading" id="6kd-OG-F9K"/>
-                            <constraint firstItem="knI-u6-wNO" firstAttribute="trailing" secondItem="bK2-8W-77f" secondAttribute="trailingMargin" id="6ny-of-nWk"/>
+                            <constraint firstItem="C06-Mp-rNB" firstAttribute="trailing" secondItem="knI-u6-wNO" secondAttribute="trailing" constant="20" id="9ah-UW-xmc"/>
                             <constraint firstItem="C06-Mp-rNB" firstAttribute="top" secondItem="ObL-tL-2Gi" secondAttribute="bottom" constant="4" id="AVN-K9-mqe"/>
                             <constraint firstItem="fkv-3v-6Bd" firstAttribute="top" secondItem="qxc-0F-nd9" secondAttribute="bottom" constant="8" id="UXV-xj-2vv"/>
                             <constraint firstItem="qxc-0F-nd9" firstAttribute="centerX" secondItem="bK2-8W-77f" secondAttribute="centerX" id="Vdb-fS-rg4"/>
+                            <constraint firstItem="knI-u6-wNO" firstAttribute="top" secondItem="fkv-3v-6Bd" secondAttribute="top" id="XBE-3E-Ome"/>
+                            <constraint firstAttribute="trailing" secondItem="knI-u6-wNO" secondAttribute="trailing" constant="20" id="alW-S2-yrQ"/>
                             <constraint firstItem="qxc-0F-nd9" firstAttribute="top" secondItem="bK2-8W-77f" secondAttribute="top" constant="4" id="gAQ-Dm-VUD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fkv-3v-6Bd" secondAttribute="trailing" constant="10" id="hPd-z5-IFd"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="knI-u6-wNO" secondAttribute="bottom" constant="10" id="obO-OR-Fiq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ObL-tL-2Gi" secondAttribute="trailing" constant="10" id="qJm-yG-aQP"/>
-                            <constraint firstItem="knI-u6-wNO" firstAttribute="leading" secondItem="fkv-3v-6Bd" secondAttribute="leading" id="swt-Ph-ss9"/>
+                            <constraint firstItem="knI-u6-wNO" firstAttribute="leadingMargin" secondItem="fkv-3v-6Bd" secondAttribute="trailing" constant="20" id="hPd-z5-IFd"/>
+                            <constraint firstItem="knI-u6-wNO" firstAttribute="leadingMargin" secondItem="ObL-tL-2Gi" secondAttribute="trailing" constant="20" id="qJm-yG-aQP"/>
                             <constraint firstItem="C06-Mp-rNB" firstAttribute="leading" secondItem="ObL-tL-2Gi" secondAttribute="leading" id="wzP-Rt-H3i"/>
-                            <constraint firstItem="knI-u6-wNO" firstAttribute="top" secondItem="ObL-tL-2Gi" secondAttribute="bottom" constant="30" id="yHj-ab-ojD"/>
                             <constraint firstItem="ObL-tL-2Gi" firstAttribute="top" secondItem="fkv-3v-6Bd" secondAttribute="bottom" constant="4" id="ybm-Wu-9F0"/>
                             <constraint firstItem="fkv-3v-6Bd" firstAttribute="leading" secondItem="bK2-8W-77f" secondAttribute="leadingMargin" constant="1" id="z3I-VY-Wzd"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="o1e-9s-CW3"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lYz-S9-H26" appends="YES" id="3Zw-it-Zx2"/>
                             <outletCollection property="gestureRecognizers" destination="Swt-cD-VIa" appends="YES" id="VIH-OG-6uB"/>
