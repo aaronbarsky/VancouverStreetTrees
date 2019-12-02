@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy7-mT-fhh">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy7-mT-fhh">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-qF-JVb">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                             </mapView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Refresh" translatesAutoresizingMaskIntoConstraints="NO" id="4HR-ZX-OKe">
-                                <rect key="frame" x="354" y="84" width="50" height="50"/>
+                                <rect key="frame" x="354" y="64" width="50" height="50"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RIJ-vn-MR5"/>
@@ -33,7 +31,7 @@
                                 </connections>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Ob-vtu">
-                                <rect key="frame" x="107" y="84" width="200" height="40"/>
+                                <rect key="frame" x="107" y="64" width="200" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom in to see trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-RI-UtO">
                                         <rect key="frame" x="21.666666666666657" y="9.6666666666666714" width="157" height="21"/>
@@ -109,13 +107,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tree data source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV1-Rd-KzV">
-                                <rect key="frame" x="20" y="84" width="374" height="36"/>
+                                <rect key="frame" x="20" y="64" width="374" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-jH-Tgh">
-                                <rect key="frame" x="20" y="120.33333333333331" width="374" height="61"/>
+                                <rect key="frame" x="20" y="108" width="374" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Data is provided by the City of Vancouver Open Data Catalogue.  License: vancouver.ca/open-government-license">
                                         <attributes>
@@ -129,13 +127,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-8e-WUb">
-                                <rect key="frame" x="20" y="213" width="374" height="36"/>
+                                <rect key="frame" x="20" y="200.66666666666666" width="374" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-r0-tDU">
-                                <rect key="frame" x="20" y="251" width="374" height="37"/>
+                                <rect key="frame" x="20" y="242.33333333333337" width="374" height="37"/>
                                 <attributedString key="attributedText">
                                     <fragment content="&quot;Cherry Blossoms 2013&quot;">
                                         <attributes>
@@ -211,7 +209,7 @@
                             <constraint firstItem="Ifo-r0-tDU" firstAttribute="firstBaseline" secondItem="TpO-8e-WUb" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="IcO-DG-0Lw"/>
                             <constraint firstItem="wV1-Rd-KzV" firstAttribute="top" secondItem="s5r-61-Pai" secondAttribute="top" constant="20" id="K2b-M6-QZp"/>
                             <constraint firstItem="wV1-Rd-KzV" firstAttribute="leading" secondItem="s5r-61-Pai" secondAttribute="leading" constant="20" id="UdW-8o-gFy"/>
-                            <constraint firstItem="I3D-jH-Tgh" firstAttribute="firstBaseline" secondItem="wV1-Rd-KzV" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="V8E-2q-cK4"/>
+                            <constraint firstItem="I3D-jH-Tgh" firstAttribute="firstBaseline" secondItem="wV1-Rd-KzV" secondAttribute="baseline" constant="28" symbolType="layoutAnchor" id="V8E-2q-cK4"/>
                             <constraint firstItem="I3D-jH-Tgh" firstAttribute="leading" secondItem="wV1-Rd-KzV" secondAttribute="leading" id="lP0-yf-0KY"/>
                             <constraint firstItem="s5r-61-Pai" firstAttribute="trailing" secondItem="wV1-Rd-KzV" secondAttribute="trailing" constant="20" id="ox4-gE-WY2"/>
                             <constraint firstAttribute="trailing" secondItem="I3D-jH-Tgh" secondAttribute="trailing" constant="20" symbolic="YES" id="rjm-cl-VKo"/>
@@ -235,7 +233,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-RE-uCy">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -266,7 +264,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xy7-mT-fhh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="foq-pF-KBF">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -287,21 +285,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Norway Maple" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-3v-6Bd">
-                                <rect key="frame" x="21" y="15.999999999999998" width="281" height="31.333333333333329"/>
+                                <rect key="frame" x="21" y="15.999999999999996" width="281" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Acer platanoides" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-tL-2Gi">
-                                <rect key="frame" x="21" y="51.333333333333336" width="281" height="18.000000000000007"/>
+                                <rect key="frame" x="21" y="53.666666666666664" width="281" height="17.999999999999993"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-Oct-1982" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Mp-rNB">
-                                <rect key="frame" x="21" y="73.333333333333329" width="393" height="18"/>
+                                <rect key="frame" x="21" y="75.666666666666671" width="393" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-0F-nd9">
@@ -325,7 +322,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ObL-tL-2Gi" firstAttribute="leading" secondItem="fkv-3v-6Bd" secondAttribute="leading" id="6kd-OG-F9K"/>

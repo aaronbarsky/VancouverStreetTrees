@@ -38,12 +38,16 @@ class MapViewController: UIViewController {
 		zoomInMessage.layer.cornerRadius = 16
 		refreshButton.layer.shadowRadius = 2
 		refreshButton.layer.shadowOffset = CGSize(width: 2, height: 2)
-		refreshButton.layer.shadowColor = UIColor.gray.cgColor
+		refreshButton.layer.shadowColor = UIColor(named:"DropShadow")?.cgColor
 		refreshButton.layer.shadowOpacity = 1.0
 		
 		hideInfoPanel(animated: false)
         startLocationManager()
     }
+	
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+		refreshButton.layer.shadowColor = UIColor(named:"DropShadow")?.cgColor
+	}
 	
 	func hideInfoPanel(animated:Bool) {
 		infoPanelBottomConstraint.constant = -infoPanelHeightConstraint.constant
@@ -111,7 +115,7 @@ extension MapViewController:CLLocationManagerDelegate {
 	
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 		if let location = locations.last {
-			let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 0.2, longitudinalMeters: 0.2)
+			let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 50.0, longitudinalMeters: 50.0)
 			mapView.setRegion(region, animated: animateLocationChange)
 			locationManager.stopUpdatingLocation()
 		}

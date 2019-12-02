@@ -11,6 +11,9 @@ import MapKit
 
 extension MKMapView {
 	func zoomLevel() -> Int {
+		guard region.span.longitudeDelta != 0.0 else {
+			return 1
+		}
 		//From https://stackoverflow.com/questions/4189621/setting-the-zoom-level-for-a-mkmapview
 		return Int(log2(360 * (Double(frame.size.width/256) / region.span.longitudeDelta)) + 1)
 	}
