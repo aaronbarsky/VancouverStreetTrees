@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy7-mT-fhh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy7-mT-fhh">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,19 +35,23 @@
                                 <rect key="frame" x="107" y="64" width="200" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom in to see trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-RI-UtO">
-                                        <rect key="frame" x="21.666666666666657" y="9.6666666666666714" width="157" height="21"/>
+                                        <rect key="frame" x="22.333333333333343" y="9.6666666666666714" width="155.66666666666666" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.5490196078431373" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="aYN-RI-UtO" firstAttribute="centerY" secondItem="f6A-Ob-vtu" secondAttribute="centerY" id="9mg-VC-uzu"/>
                                     <constraint firstItem="aYN-RI-UtO" firstAttribute="centerX" secondItem="f6A-Ob-vtu" secondAttribute="centerX" id="Jso-44-nma"/>
                                     <constraint firstAttribute="width" constant="200" id="Ov0-VA-OQU"/>
                                     <constraint firstAttribute="height" constant="40" id="aXb-fK-pLK"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3KT-z9-K5P" appends="YES" id="lpB-7T-GPJ"/>
+                                </connections>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-3J-CSS">
                                 <rect key="frame" x="0.0" y="566" width="414" height="170"/>
@@ -57,6 +63,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GqQ-qF-JVb" secondAttribute="trailing" id="2P0-bK-LBY"/>
@@ -69,9 +76,8 @@
                             <constraint firstItem="c6S-3J-CSS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hza-kq-1Nq"/>
                             <constraint firstAttribute="bottom" secondItem="GqQ-qF-JVb" secondAttribute="bottom" id="ocq-h3-Fy3"/>
                             <constraint firstItem="4HR-ZX-OKe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rOy-Fx-0Hh"/>
-                            <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wln-Li-1WB"/>
+                            <constraint firstItem="GqQ-qF-JVb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="wln-Li-1WB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Vancouver Street Trees" id="2n6-Se-01c">
                         <barButtonItem key="rightBarButtonItem" title="i" id="Nnu-Kb-B0f">
@@ -92,6 +98,11 @@
                 <tapGestureRecognizer id="HtV-JJ-aTc" userLabel="Refresh Tap Gesture Recognizer">
                     <connections>
                         <action selector="refreshTapped:" destination="BYZ-38-t0r" id="yRb-wQ-SZd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3KT-z9-K5P" userLabel="Zoom In Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="zoomInTapped:" destination="BYZ-38-t0r" id="ZqE-0D-soc"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -127,7 +138,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="s5r-61-Pai"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ifo-r0-tDU" firstAttribute="leading" secondItem="TpO-8e-WUb" secondAttribute="leading" id="ArV-jg-tQh"/>
                             <constraint firstItem="TpO-8e-WUb" firstAttribute="leading" secondItem="wV1-Rd-KzV" secondAttribute="leading" id="Dwo-Ki-G2D"/>
@@ -142,7 +154,6 @@
                             <constraint firstItem="TpO-8e-WUb" firstAttribute="top" secondItem="I3D-jH-Tgh" secondAttribute="bottom" constant="31.5" id="ty9-X4-crZ"/>
                             <constraint firstItem="Ifo-r0-tDU" firstAttribute="trailing" secondItem="I3D-jH-Tgh" secondAttribute="trailing" id="zrY-hS-PQR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="s5r-61-Pai"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRb-Sq-f3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,6 +177,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="eSu-8W-jN3"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TF7-RE-uCy" firstAttribute="leading" secondItem="eSu-8W-jN3" secondAttribute="leading" id="0OY-9F-rJt"/>
@@ -173,7 +185,6 @@
                             <constraint firstItem="eSu-8W-jN3" firstAttribute="trailing" secondItem="TF7-RE-uCy" secondAttribute="trailing" id="e9n-tv-jxG"/>
                             <constraint firstItem="TF7-RE-uCy" firstAttribute="top" secondItem="eSu-8W-jN3" secondAttribute="top" id="uuw-no-FfK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eSu-8W-jN3"/>
                     </view>
                     <connections>
                         <outlet property="webView" destination="TF7-RE-uCy" id="ewM-el-Pdp"/>
@@ -217,13 +228,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Acer platanoides" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-tL-2Gi">
                                 <rect key="frame" x="21" y="53.666666666666664" width="281" height="17.999999999999993"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-Oct-1982" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Mp-rNB">
                                 <rect key="frame" x="21" y="75.666666666666671" width="393" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-0F-nd9">
@@ -247,7 +258,8 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="o1e-9s-CW3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ObL-tL-2Gi" firstAttribute="leading" secondItem="fkv-3v-6Bd" secondAttribute="leading" id="6kd-OG-F9K"/>
@@ -264,7 +276,6 @@
                             <constraint firstItem="ObL-tL-2Gi" firstAttribute="top" secondItem="fkv-3v-6Bd" secondAttribute="bottom" constant="4" id="ybm-Wu-9F0"/>
                             <constraint firstItem="fkv-3v-6Bd" firstAttribute="leading" secondItem="bK2-8W-77f" secondAttribute="leadingMargin" constant="1" id="z3I-VY-Wzd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="o1e-9s-CW3"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lYz-S9-H26" appends="YES" id="3Zw-it-Zx2"/>
                             <outletCollection property="gestureRecognizers" destination="Swt-cD-VIa" appends="YES" id="VIH-OG-6uB"/>
@@ -295,5 +306,11 @@
     </scenes>
     <resources>
         <image name="Refresh" width="170.66667175292969" height="170.66667175292969"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
